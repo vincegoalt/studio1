@@ -144,14 +144,17 @@ export function LocationContent() {
           <FadeIn>
             <div className="max-w-4xl mx-auto">
               <div className="bg-warm-white rounded-2xl overflow-hidden shadow-lg">
-                <div className="aspect-video bg-warm-gray flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <MapPin className="w-12 h-12 text-sage mx-auto mb-4" />
-                    <p className="text-stone mb-2">Google Maps Integration</p>
-                    <p className="text-pebble text-sm">
-                      3509 S Peoria Ave, Tulsa, OK 74105
-                    </p>
-                  </div>
+                <div className="aspect-video">
+                  <iframe
+                    src="https://maps.google.com/maps?q=3509+S+Peoria+Ave,+Tulsa,+OK+74105&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Studio 1 — 3509 S Peoria Ave, Tulsa, OK 74105"
+                  />
                 </div>
               </div>
             </div>
