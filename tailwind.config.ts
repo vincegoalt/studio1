@@ -12,6 +12,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         heading: ["var(--font-dm-sans)", "var(--font-inter)", "system-ui", "sans-serif"],
+        logo: ["var(--font-roboto-slab)", "Rockwell", "Georgia", "serif"],
       },
       colors: {
         cream: "#FDF8F3",

@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
+import { Logo } from "@/components/ui/Logo";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -28,15 +28,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block">
-              <Image
-                src="/images/logo.png"
-                alt="Studio 1"
-                width={120}
-                height={120}
-                className="h-[120px] w-[120px] rounded-full"
-              />
-            </Link>
+            <Logo size="md" light />
             <p className="mt-4 text-pebble text-sm leading-relaxed">
               Your Teachers. Your Community. Your Studio.
               <br />

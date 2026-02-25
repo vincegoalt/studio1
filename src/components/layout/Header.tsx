@@ -6,8 +6,8 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { Logo } from "@/components/ui/Logo";
 
 const navLinks = [
   { label: "Classes", href: "/classes" },
@@ -53,7 +53,7 @@ export function Header() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
-  const totalHeaderHeight = 120 + bannerHeight;
+  const totalHeaderHeight = 72 + bannerHeight;
 
   return (
     <>
@@ -99,17 +99,8 @@ export function Header() {
             isScrolled ? "shadow-sm" : ""
           }`}
         >
-          <nav className="container-custom h-[120px] flex items-center justify-between">
-            <Link href="/" className="flex-shrink-0">
-              <Image
-                src="/images/logo.png"
-                alt="Studio 1 — Barre, TRX, Pilates, Yoga in Tulsa"
-                width={120}
-                height={120}
-                className="h-[120px] w-[120px] rounded-full"
-                priority
-              />
-            </Link>
+          <nav className="container-custom h-[72px] flex items-center justify-between">
+            <Logo size="lg" className="flex-shrink-0" />
 
             <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
