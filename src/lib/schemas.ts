@@ -94,7 +94,7 @@ export const courseSchemas = [
     "@type": "Course",
     name: "Pilates Classes",
     description:
-      "Core-focused movement emphasizing alignment, breath, and controlled movement. Strengthen and lengthen with mat and reformer options at Studio 1 in Tulsa.",
+      "Core-focused movement emphasizing alignment, breath, and controlled movement. Strengthen and lengthen with mat-based Pilates at Studio 1 in Tulsa.",
     provider: {
       "@type": "Organization",
       name: "Studio 1",
@@ -157,6 +157,67 @@ export const offerSchemas = [
     name: "Monthly Unlimited Membership",
     description:
       "Unlimited monthly access to all Barre, TRX, Pilates, and Yoga classes at Studio 1 in Tulsa's Brookside.",
+    price: "99.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    seller: {
+      "@type": "Organization",
+      name: "Studio 1",
+      url: siteUrl,
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    name: "Couples Unlimited Membership",
+    description:
+      "Unlimited monthly access for two people in the same household to all classes at Studio 1 in Tulsa's Brookside.",
+    price: "169.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    seller: {
+      "@type": "Organization",
+      name: "Studio 1",
+      url: siteUrl,
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    name: "Student Membership",
+    description:
+      "Unlimited monthly access for students to all Barre, TRX, Pilates, and Yoga classes at Studio 1. Valid student ID required.",
+    price: "89.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    seller: {
+      "@type": "Organization",
+      name: "Studio 1",
+      url: siteUrl,
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    name: "10-Class Pack",
+    description:
+      "10 classes to use at Studio 1 in Tulsa's Brookside. All class types included. Expires in 90 days.",
+    price: "150.00",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    seller: {
+      "@type": "Organization",
+      name: "Studio 1",
+      url: siteUrl,
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    name: "5-Class Pack",
+    description:
+      "5 classes to use at Studio 1 in Tulsa's Brookside. All class types included. Expires in 60 days.",
+    price: "90.00",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
     seller: {
@@ -202,7 +263,7 @@ export const personSchemas = [
     jobTitle: "Pilates Instructor",
     worksFor: { "@type": "Organization", name: "Studio 1", url: siteUrl },
     description:
-      "Rachel is a certified Pilates instructor with expertise in both mat and reformer. She focuses on alignment, breath, and controlled movement.",
+      "Rachel is a certified Pilates instructor with expertise in mat-based Pilates. She focuses on alignment, breath, and controlled movement.",
   },
   {
     "@context": "https://schema.org",
@@ -295,7 +356,7 @@ export const faqSchema = {
       name: "Will pricing be the same?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We've worked hard to keep pricing competitive and accessible. Our Intro Offer is $39 for 2 weeks unlimited. We offer monthly memberships, class packs, and drop-in options.",
+        text: "We've worked hard to keep pricing competitive and accessible. Our Intro Offer is $39 for 2 weeks unlimited, monthly unlimited is $99/month, and class packs start at $90. We also offer couples and student memberships.",
       },
     },
   ],

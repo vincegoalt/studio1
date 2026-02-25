@@ -27,7 +27,7 @@ const classTypes = [
   {
     name: "Pilates",
     description:
-      "Core-focused movement emphasizing alignment, breath, and controlled movement. Strengthen and lengthen with mat and reformer options.",
+      "Core-focused movement emphasizing alignment, breath, and controlled movement. Strengthen and lengthen with mat-based Pilates.",
     image: "/images/class-pilates.jpg",
   },
   {

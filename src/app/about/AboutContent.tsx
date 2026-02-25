@@ -31,7 +31,7 @@ const instructors = [
   {
     name: "Rachel Kim",
     specialty: "Pilates",
-    bio: "Rachel is a certified Pilates instructor with expertise in both mat and reformer. She focuses on alignment, breath, and controlled movement.",
+    bio: "Rachel is a certified Pilates instructor with expertise in mat-based Pilates. She focuses on alignment, breath, and controlled movement.",
     image: "/images/instructors/instructor-4.jpg",
   },
   {

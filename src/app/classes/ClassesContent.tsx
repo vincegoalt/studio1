@@ -35,11 +35,11 @@ const classes = [
     description:
       "Core-focused movement practice emphasizing alignment, breath, and controlled movement. Strengthen and lengthen muscles while improving posture and body awareness.",
     whatToExpect:
-      "Classes focus on precise, controlled movements that originate from your core. We offer both mat Pilates (using your body weight and small props) and reformer sessions (using the Pilates reformer machine).",
+      "Our mat-based Pilates classes use your body weight and small props like resistance bands and Pilates balls for a full-body workout.",
     whoItsFor:
       "Ideal for those seeking low-impact strength building, improved flexibility, and better posture. Excellent for injury prevention and rehabilitation.",
     level: "All Levels Welcome",
-    temperature: "70-72°F",
+    temperature: "85-95°F (heated)",
     image: "/images/class-pilates.jpg",
   },
   {
@@ -51,7 +51,7 @@ const classes = [
     whoItsFor:
       "Whether you're brand new to yoga or have years of experience, we have a class for you. Our instructors offer modifications for every pose.",
     level: "All Levels Welcome",
-    temperature: "75-80°F (heated options available)",
+    temperature: "85-95°F (heated classes available)",
     image: "/images/class-yoga.jpg",
   },
 ];
