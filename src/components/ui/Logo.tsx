@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface LogoProps {
   className?: string;
@@ -6,53 +7,31 @@ interface LogoProps {
   size?: "sm" | "md" | "lg";
 }
 
+const sizeMap = {
+  sm: { width: 120, height: 24 },
+  md: { width: 160, height: 32 },
+  lg: { width: 200, height: 40 },
+};
+
 export function Logo({ className = "", light = false, size = "md" }: LogoProps) {
-  const color = light ? "text-white" : "text-charcoal";
-
-  const sizeMap = {
-    sm: {
-      text: "text-lg",
-      circle: "w-7 h-7 border-[2px]",
-      num: "text-sm",
-      gap: "gap-1.5",
-      tracking: "tracking-[0.18em]",
-    },
-    md: {
-      text: "text-2xl",
-      circle: "w-9 h-9 border-[2.5px]",
-      num: "text-lg",
-      gap: "gap-2",
-      tracking: "tracking-[0.18em]",
-    },
-    lg: {
-      text: "text-3xl",
-      circle: "w-11 h-11 border-[3px]",
-      num: "text-xl",
-      gap: "gap-2.5",
-      tracking: "tracking-[0.18em]",
-    },
-  };
-
-  const s = sizeMap[size];
+  const { width, height } = sizeMap[size];
+  const src = light ? "/images/logo-studio1-white.png" : "/images/logo-studio1.png";
 
   return (
     <Link
       href="/"
-      className={`flex items-center ${s.gap} ${color} ${className}`}
+      className={`flex-shrink-0 ${className}`}
       aria-label="Studio 1 — Home"
     >
-      <span
-        className={`font-logo font-bold ${s.text} ${s.tracking} lowercase leading-none`}
-      >
-        studio
-      </span>
-      <span
-        className={`flex items-center justify-center ${s.circle} border-current rounded-full leading-none`}
-      >
-        <span className={`font-logo font-bold ${s.num} leading-none`}>
-          1
-        </span>
-      </span>
+      <Image
+        src={src}
+        alt="Studio 1 — Barre, TRX, Pilates, Yoga in Tulsa"
+        width={width}
+        height={height}
+        className={`h-[${height}px] w-auto`}
+        style={{ height, width: "auto" }}
+        priority
+      />
     </Link>
   );
 }
