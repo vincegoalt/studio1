@@ -8,9 +8,9 @@ interface LogoProps {
 }
 
 const sizeMap = {
-  sm: { width: 120, height: 24 },
-  md: { width: 160, height: 32 },
-  lg: { width: 200, height: 40 },
+  sm: { width: 160, height: 32 },
+  md: { width: 200, height: 40 },
+  lg: { width: 275, height: 55 },
 };
 
 export function Logo({ className = "", light = false, size = "md" }: LogoProps) {
