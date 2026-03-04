@@ -288,8 +288,8 @@ export function ScheduleContent() {
           <FadeIn>
             <h2 className="text-2xl font-semibold mb-4">Ready to Book?</h2>
             <p className="text-stone mb-6 max-w-xl mx-auto">
-              New to Studio 1? Try our intro offer — 2 weeks of unlimited
-              classes for just $39.
+              New to Studio 1? Join by April 1 and get your first 3 months
+              at reduced membership rates.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/pricing" className="btn-primary">

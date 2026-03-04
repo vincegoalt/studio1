@@ -316,12 +316,11 @@ export function HomeContent() {
               Ready to Roll Out Your Mat?
             </h2>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-4">
-              Start with our Intro Offer:{" "}
-              <span className="font-semibold">$39 for 2 weeks</span> of
-              unlimited classes.
+              Join by April 1 and lock in{" "}
+              <span className="font-semibold">reduced rates for your first 3 months</span>.
             </p>
             <p className="text-white/70 mb-10">
-              No commitment, just movement. New members only.
+              Monthly Unlimited starting at $99/mo. No commitment, just movement.
             </p>
             <Link
               href="/pricing"

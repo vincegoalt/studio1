@@ -10,24 +10,8 @@ import {
 
 const pricingOptions = [
   {
-    name: "Intro Offer",
-    price: "$39",
-    period: "2 Weeks Unlimited",
-    description:
-      "The perfect way to explore Studio 1 and find your favorite classes.",
-    features: [
-      "Unlimited classes for 14 days",
-      "All class types included",
-      "Perfect for beginners",
-      "No commitment required",
-    ],
-    cta: "Get Started",
-    featured: true,
-    note: "All new members start with our Intro Offer",
-  },
-  {
     name: "Monthly Unlimited",
-    price: "$99",
+    price: "$129",
     period: "per month",
     description: "Unlimited access to everything Studio 1 offers.",
     features: [
@@ -37,11 +21,11 @@ const pricingOptions = [
       "Priority booking",
     ],
     cta: "Choose Monthly",
-    featured: false,
+    promo: "Join by April 1 — first 3 months $99/mo",
   },
   {
     name: "Couples Unlimited",
-    price: "$169",
+    price: "$189",
     period: "per month",
     description: "Unlimited access for two people in the same household.",
     features: [
@@ -51,11 +35,11 @@ const pricingOptions = [
       "Same household required",
     ],
     cta: "Choose Couples",
-    featured: false,
+    promo: "Join by April 1 — first 3 months $159/mo",
   },
   {
-    name: "Student Membership",
-    price: "$89",
+    name: "Student",
+    price: "$99",
     period: "per month",
     description: "Unlimited classes at a student-friendly price.",
     features: [
@@ -65,11 +49,11 @@ const pricingOptions = [
       "Valid student ID required",
     ],
     cta: "Choose Student",
-    featured: false,
+    promo: "Join by April 1 — first 3 months $79/mo",
   },
   {
     name: "10-Class Pack",
-    price: "$150",
+    price: "$180",
     period: "10 classes",
     description: "Flexible option for regular practitioners.",
     features: [
@@ -79,21 +63,6 @@ const pricingOptions = [
       "Flexible scheduling",
     ],
     cta: "Buy 10 Classes",
-    featured: false,
-  },
-  {
-    name: "5-Class Pack",
-    price: "$90",
-    period: "5 classes",
-    description: "Great for occasional visitors.",
-    features: [
-      "5 classes to use anytime",
-      "60-day expiration",
-      "All class types included",
-      "Flexible scheduling",
-    ],
-    cta: "Buy 5 Classes",
-    featured: false,
   },
 ];
 
@@ -112,7 +81,7 @@ export function PricingContent() {
         </div>
       </section>
 
-      {/* Featured Offer */}
+      {/* Launch Promo */}
       <section className="section-padding bg-cream">
         <div className="container-custom">
           <FadeIn>
@@ -122,36 +91,28 @@ export function PricingContent() {
                   <Sparkles className="w-6 h-6 text-white/60" />
                 </div>
                 <p className="text-sm uppercase tracking-[0.2em] text-white/80 mb-4">
-                  New Members
+                  Grand Opening Special
                 </p>
-                <h2 className="text-3xl md:text-4xl font-bold mb-2">
-                  Intro Offer
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Join by April 1
                 </h2>
-                <div className="flex items-baseline justify-center gap-2 mb-4">
-                  <span className="text-5xl md:text-6xl font-bold">$39</span>
+                <p className="text-xl text-white/90 mb-6">
+                  Lock in reduced rates for your first 3 months
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-lg mx-auto">
+                  <div>
+                    <p className="text-2xl font-bold">$99<span className="text-base font-normal">/mo</span></p>
+                    <p className="text-white/70 text-sm">Monthly Unlimited</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">$159<span className="text-base font-normal">/mo</span></p>
+                    <p className="text-white/70 text-sm">Couples Unlimited</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">$79<span className="text-base font-normal">/mo</span></p>
+                    <p className="text-white/70 text-sm">Student</p>
+                  </div>
                 </div>
-                <p className="text-xl text-white/90 mb-4">
-                  2 Weeks Unlimited
-                </p>
-                <p className="text-white/80 max-w-lg mx-auto mb-8">
-                  The perfect way to explore Studio 1 and find your favorite
-                  classes. Unlimited access to Barre, TRX, Pilates, and Yoga for
-                  14 days.
-                </p>
-                <ul className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-white/90">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4" />
-                    All class types
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4" />
-                    No commitment
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4" />
-                    Perfect for beginners
-                  </li>
-                </ul>
                 <Link
                   href="/schedule"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-sage font-medium text-sm uppercase tracking-wider rounded-lg transition-all duration-300 hover:bg-white/90 hover:-translate-y-0.5"
@@ -160,7 +121,7 @@ export function PricingContent() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
                 <p className="text-white/60 text-sm mt-4">
-                  All new members start with our Intro Offer
+                  Promo rates apply to your first 3 months of membership
                 </p>
               </div>
             </div>
@@ -178,8 +139,8 @@ export function PricingContent() {
             </p>
           </FadeIn>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
-            {pricingOptions.slice(1).map((option) => (
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+            {pricingOptions.map((option) => (
               <StaggerItem key={option.name}>
                 <div className="bg-warm-white rounded-2xl p-8 h-full flex flex-col border-2 border-transparent hover:border-sage/20 transition-all duration-300">
                   <div className="mb-6">
@@ -193,6 +154,11 @@ export function PricingContent() {
                       <span className="text-stone">{option.period}</span>
                     </div>
                     <p className="text-stone text-sm">{option.description}</p>
+                    {option.promo && (
+                      <p className="text-sage text-sm font-medium mt-2">
+                        {option.promo}
+                      </p>
+                    )}
                   </div>
 
                   <ul className="space-y-3 mb-8 flex-grow">

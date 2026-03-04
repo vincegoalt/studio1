@@ -216,7 +216,7 @@ export function AboutContent() {
             </h2>
             <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
               Experience the difference of a studio that puts community first.
-              Your first two weeks are just $39.
+              Join by April 1 for reduced rates on your first 3 months.
             </p>
             <Link
               href="/pricing"

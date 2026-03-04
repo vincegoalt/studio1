@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "Do I need to create a new account?",
     answer:
-      "Yes, Studio 1 uses a new booking system, so you'll need to create a new account. We know it's an extra step, but it helps us start fresh as an independent studio. The good news? Our Intro Offer ($39 for 2 weeks unlimited) gives you a great way to try us out!",
+      "Yes, Studio 1 uses a new booking system, so you'll need to create a new account. We know it's an extra step, but it helps us start fresh as an independent studio. The good news? Join by April 1 and get reduced rates for your first 3 months!",
   },
   {
     question: "What classes will Studio 1 offer?",
@@ -53,7 +53,7 @@ const faqs = [
   {
     question: "Will pricing be the same?",
     answer:
-      "We've worked hard to keep pricing competitive and accessible. Our Intro Offer is $39 for 2 weeks unlimited — a great way to return to your practice. We offer monthly memberships, class packs, and drop-in options to fit different needs.",
+      "We've worked hard to keep pricing competitive and accessible. Monthly Unlimited is $129/month, Couples is $189/month, and Student is $99/month. We also offer a 10-class pack for $180. Join by April 1 to lock in reduced rates for your first 3 months!",
   },
 ];
 
@@ -156,28 +156,27 @@ export function WelcomeHomeContent() {
                 Welcome Home Offer
               </h2>
               <p className="text-lg text-white/90 mb-6">
-                Come back to your practice with our special Intro Offer for new
-                members.
+                Come back to your practice — join by April 1 and lock in reduced
+                rates for your first 3 months.
               </p>
               <div className="bg-white/10 rounded-2xl p-8 mb-8">
-                <p className="text-sm uppercase tracking-[0.2em] text-white/80 mb-2">
-                  2 Weeks Unlimited
+                <p className="text-sm uppercase tracking-[0.2em] text-white/80 mb-4">
+                  First 3 Months — Join by April 1
                 </p>
-                <p className="text-5xl md:text-6xl font-bold mb-4">$39</p>
-                <ul className="flex flex-wrap justify-center gap-4 mb-6 text-sm text-white/90">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4" />
-                    All class types
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4" />
-                    All instructors
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4" />
-                    No commitment
-                  </li>
-                </ul>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div>
+                    <p className="text-2xl font-bold">$99<span className="text-base font-normal">/mo</span></p>
+                    <p className="text-white/70 text-sm">Monthly Unlimited</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">$159<span className="text-base font-normal">/mo</span></p>
+                    <p className="text-white/70 text-sm">Couples Unlimited</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">$79<span className="text-base font-normal">/mo</span></p>
+                    <p className="text-white/70 text-sm">Student</p>
+                  </div>
+                </div>
               </div>
               <Link
                 href="/schedule"

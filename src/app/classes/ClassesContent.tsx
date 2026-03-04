@@ -156,8 +156,8 @@ export function ClassesContent() {
               Not Sure Where to Start?
             </h2>
             <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
-              Try them all with our Intro Offer: $39 for 2 weeks of unlimited
-              classes. Find the practice that speaks to you.
+              Try them all — join by April 1 and get your first 3 months at
+              reduced rates. Find the practice that speaks to you.
             </p>
             <Link
               href="/pricing"

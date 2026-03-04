@@ -6,7 +6,7 @@ import { PricingContent } from "./PricingContent";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Simple, transparent pricing at Studio 1. Intro Offer: $39 for 2 weeks unlimited. $99/month unlimited membership, class packs from $90. Brookside, Tulsa.",
+    "Simple, transparent pricing at Studio 1. Monthly Unlimited $129/mo, Couples $189/mo, Student $99/mo. 10-class packs available. Join by April 1 for reduced launch rates. Brookside, Tulsa.",
   alternates: { canonical: "/pricing" },
 };
 

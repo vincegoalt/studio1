@@ -139,25 +139,10 @@ export const offerSchemas = [
   {
     "@context": "https://schema.org",
     "@type": "Offer",
-    name: "Intro Offer — 2 Weeks Unlimited",
-    description:
-      "Try Studio 1 with 2 weeks of unlimited Barre, TRX, Pilates, and Yoga classes for just $39. New members only.",
-    price: "39.00",
-    priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
-    seller: {
-      "@type": "Organization",
-      name: "Studio 1",
-      url: siteUrl,
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Offer",
     name: "Monthly Unlimited Membership",
     description:
       "Unlimited monthly access to all Barre, TRX, Pilates, and Yoga classes at Studio 1 in Tulsa's Brookside.",
-    price: "99.00",
+    price: "129.00",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
     seller: {
@@ -172,7 +157,7 @@ export const offerSchemas = [
     name: "Couples Unlimited Membership",
     description:
       "Unlimited monthly access for two people in the same household to all classes at Studio 1 in Tulsa's Brookside.",
-    price: "169.00",
+    price: "189.00",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
     seller: {
@@ -187,7 +172,7 @@ export const offerSchemas = [
     name: "Student Membership",
     description:
       "Unlimited monthly access for students to all Barre, TRX, Pilates, and Yoga classes at Studio 1. Valid student ID required.",
-    price: "89.00",
+    price: "99.00",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
     seller: {
@@ -202,22 +187,7 @@ export const offerSchemas = [
     name: "10-Class Pack",
     description:
       "10 classes to use at Studio 1 in Tulsa's Brookside. All class types included. Expires in 90 days.",
-    price: "150.00",
-    priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
-    seller: {
-      "@type": "Organization",
-      name: "Studio 1",
-      url: siteUrl,
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Offer",
-    name: "5-Class Pack",
-    description:
-      "5 classes to use at Studio 1 in Tulsa's Brookside. All class types included. Expires in 60 days.",
-    price: "90.00",
+    price: "180.00",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
     seller: {
@@ -340,7 +310,7 @@ export const faqSchema = {
       name: "Do I need to create a new account?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Studio 1 uses a new booking system, so you'll need to create a new account. Our Intro Offer ($39 for 2 weeks unlimited) gives you a great way to try us out!",
+        text: "Yes, Studio 1 uses a new booking system, so you'll need to create a new account. Join by April 1 to lock in reduced rates for your first 3 months!",
       },
     },
     {
@@ -356,7 +326,7 @@ export const faqSchema = {
       name: "Will pricing be the same?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We've worked hard to keep pricing competitive and accessible. Our Intro Offer is $39 for 2 weeks unlimited, monthly unlimited is $99/month, and class packs start at $90. We also offer couples and student memberships.",
+        text: "We've worked hard to keep pricing competitive and accessible. Monthly Unlimited is $129/month, Couples Unlimited is $189/month, and Student membership is $99/month. We also offer a 10-class pack for $180. Join by April 1 to lock in reduced rates for your first 3 months!",
       },
     },
   ],
