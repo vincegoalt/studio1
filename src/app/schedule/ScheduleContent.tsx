@@ -21,7 +21,6 @@ const TIME_SLOTS = [
   "12:00 PM",
   "4:30 PM",
   "5:30 PM",
-  "6:45 PM",
 ] as const;
 
 // Schedule data derived from the provided image
@@ -41,7 +40,7 @@ const schedule: Record<string, Record<string, ScheduleSlot>> = {
     Wed: null,
     Thu: { type: "Yoga", instructor: "Brynna" },
     Fri: null,
-    Sat: { type: "Yoga", instructor: "", displayTime: "10:00 AM" },
+    Sat: { type: "Pilates", instructor: "Paige", displayTime: "10:00 AM" },
     Sun: null,
   },
   "9:00 AM": {
@@ -82,15 +81,6 @@ const schedule: Record<string, Record<string, ScheduleSlot>> = {
     Thu: { type: "Barre", instructor: "Angela" },
     Fri: null,
     Sat: { type: "Yoga", instructor: "Brynna", displayTime: "5:00 PM" },
-    Sun: null,
-  },
-  "6:45 PM": {
-    Mon: null,
-    Tue: { type: "Yoga", instructor: "Mackenzie" },
-    Wed: null,
-    Thu: { type: "Pilates", instructor: "Paige" },
-    Fri: null,
-    Sat: null,
     Sun: null,
   },
 };
@@ -314,8 +304,8 @@ export function ScheduleContent() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto">
-              {["Barre", "TRX", "Pilates", "Yoga"].map((className) => (
+            <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-2xl mx-auto">
+              {["Barre", "Pilates", "Yoga"].map((className) => (
                 <Link
                   key={className}
                   href="/classes"

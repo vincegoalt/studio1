@@ -18,8 +18,8 @@ const instructors = [
   },
   {
     name: "Michael Torres",
-    specialty: "TRX & Strength",
-    bio: "Michael brings 15 years of fitness experience to Studio 1. His TRX classes challenge you to find strength you didn't know you had.",
+    specialty: "Strength & Conditioning",
+    bio: "Michael brings 15 years of fitness experience to Studio 1. His classes challenge you to find strength you didn't know you had.",
     image: "/images/instructors/instructor-2.jpg",
   },
   {
@@ -42,7 +42,7 @@ const instructors = [
   },
   {
     name: "Amanda Foster",
-    specialty: "TRX & HIIT",
+    specialty: "HIIT & Fitness",
     bio: "Amanda's classes are dynamic and fun. She believes fitness should be enjoyable, and her energy is contagious.",
     image: "/images/instructors/instructor-6.jpg",
   },

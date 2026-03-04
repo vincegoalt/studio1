@@ -5,7 +5,7 @@ export const healthClubSchema = {
   "@type": ["HealthClub", "Organization"],
   name: "Studio 1",
   description:
-    "Independent boutique fitness studio in Tulsa's Brookside neighborhood offering Barre, TRX, Pilates, and Yoga classes.",
+    "Independent boutique fitness studio in Tulsa's Brookside neighborhood offering Barre, Pilates, and Yoga classes.",
   url: siteUrl,
   telephone: "+1-918-555-0123",
   email: "hello@studio1tul.com",
@@ -67,29 +67,7 @@ export const courseSchemas = [
       },
     },
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    name: "TRX Suspension Training",
-    description:
-      "Suspension training using your body weight for a full-body workout. Build strength, balance, and flexibility at Studio 1 in Tulsa's Brookside.",
-    provider: {
-      "@type": "Organization",
-      name: "Studio 1",
-      url: siteUrl,
-    },
-    courseMode: "onsite",
-    locationCreated: {
-      "@type": "Place",
-      name: "Studio 1",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Tulsa",
-        addressRegion: "OK",
-      },
-    },
-  },
-  {
+{
     "@context": "https://schema.org",
     "@type": "Course",
     name: "Pilates Classes",
@@ -141,7 +119,7 @@ export const offerSchemas = [
     "@type": "Offer",
     name: "Monthly Unlimited Membership",
     description:
-      "Unlimited monthly access to all Barre, TRX, Pilates, and Yoga classes at Studio 1 in Tulsa's Brookside.",
+      "Unlimited monthly access to all Barre, Pilates, and Yoga classes at Studio 1 in Tulsa's Brookside.",
     price: "129.00",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
@@ -171,7 +149,7 @@ export const offerSchemas = [
     "@type": "Offer",
     name: "Student Membership",
     description:
-      "Unlimited monthly access for students to all Barre, TRX, Pilates, and Yoga classes at Studio 1. Valid student ID required.",
+      "Unlimited monthly access for students to all Barre, Pilates, and Yoga classes at Studio 1. Valid student ID required.",
     price: "99.00",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
@@ -212,10 +190,10 @@ export const personSchemas = [
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Michael Torres",
-    jobTitle: "TRX & Strength Instructor",
+    jobTitle: "Strength & Conditioning Instructor",
     worksFor: { "@type": "Organization", name: "Studio 1", url: siteUrl },
     description:
-      "Michael brings 15 years of fitness experience to Studio 1. His TRX classes challenge you to find strength you didn't know you had.",
+      "Michael brings 15 years of fitness experience to Studio 1. His classes challenge you to find strength you didn't know you had.",
   },
   {
     "@context": "https://schema.org",
@@ -248,7 +226,7 @@ export const personSchemas = [
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Amanda Foster",
-    jobTitle: "TRX & HIIT Instructor",
+    jobTitle: "HIIT & Fitness Instructor",
     worksFor: { "@type": "Organization", name: "Studio 1", url: siteUrl },
     description:
       "Amanda's classes are dynamic and fun. She believes fitness should be enjoyable, and her energy is contagious.",
@@ -318,7 +296,7 @@ export const faqSchema = {
       name: "What classes will Studio 1 offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We offer Barre, TRX, Pilates, and Yoga — the same disciplines you loved at BYB. Our class schedule includes a variety of levels and styles.",
+        text: "We offer Barre, Pilates, and Yoga — the same disciplines you loved at BYB. Our class schedule includes a variety of levels and styles.",
       },
     },
     {

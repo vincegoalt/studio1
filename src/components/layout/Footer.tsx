@@ -16,7 +16,6 @@ const navLinks = [
 
 const classLinks = [
   { label: "Barre", href: "/classes" },
-  { label: "TRX", href: "/classes" },
   { label: "Pilates", href: "/classes" },
   { label: "Yoga", href: "/classes" },
 ];
@@ -32,7 +31,7 @@ export function Footer() {
             <p className="mt-4 text-pebble text-sm leading-relaxed">
               Your Teachers. Your Community. Your Studio.
               <br />
-              Barre &middot; TRX &middot; Pilates &middot; Yoga
+              Barre &middot; Pilates &middot; Yoga
             </p>
             <div className="flex items-center gap-4 mt-6">
               <a

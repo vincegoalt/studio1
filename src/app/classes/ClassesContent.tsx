@@ -18,19 +18,7 @@ const classes = [
     temperature: "72-75°F",
     image: "/images/class-barre.jpg",
   },
-  {
-    name: "TRX",
-    description:
-      "Suspension training that uses your body weight for a full-body workout. Build strength, balance, and flexibility with exercises that engage your core with every movement.",
-    whatToExpect:
-      "Using TRX suspension straps anchored to the wall, you'll perform exercises that leverage gravity and your body weight. Classes include strength circuits, cardio bursts, and core-focused movements.",
-    whoItsFor:
-      "Great for all fitness levels. The beauty of TRX is that you control the intensity — simply adjust your body position to make exercises easier or more challenging.",
-    level: "All Levels Welcome",
-    temperature: "72-75°F",
-    image: "/images/class-trx.jpg",
-  },
-  {
+{
     name: "Pilates",
     description:
       "Core-focused movement practice emphasizing alignment, breath, and controlled movement. Strengthen and lengthen muscles while improving posture and body awareness.",
@@ -65,7 +53,7 @@ export function ClassesContent() {
           <FadeIn>
             <h1 className="mb-6">Find Your Practice</h1>
             <p className="text-lg md:text-xl text-stone max-w-2xl mx-auto">
-              Four disciplines. One community. Find what moves you.
+              Three disciplines. One community. Find what moves you.
             </p>
           </FadeIn>
         </div>

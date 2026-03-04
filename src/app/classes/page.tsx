@@ -6,7 +6,7 @@ import { ClassesContent } from "./ClassesContent";
 export const metadata: Metadata = {
   title: "Classes",
   description:
-    "Find your practice at Studio 1. Barre, TRX, Pilates, and Yoga classes in Tulsa's Brookside. All levels welcome. Book your first class today.",
+    "Find your practice at Studio 1. Barre, Pilates, and Yoga classes in Tulsa's Brookside. All levels welcome. Book your first class today.",
   alternates: { canonical: "/classes" },
 };
 

@@ -25,7 +25,7 @@ export function Logo({ className = "", light = false, size = "md" }: LogoProps) 
     >
       <Image
         src={src}
-        alt="Studio 1 — Barre, TRX, Pilates, Yoga in Tulsa"
+        alt="Studio 1 — Barre, Pilates, Yoga in Tulsa"
         width={width}
         height={height}
         className={`h-[${height}px] w-auto`}

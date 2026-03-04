@@ -31,19 +31,19 @@ const siteUrl = "https://studio1tul.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Studio 1 — Barre, TRX, Pilates & Yoga in Tulsa",
-    template: "%s | Studio 1 — Barre, TRX, Pilates & Yoga in Tulsa",
+    default: "Studio 1 — Barre, Pilates & Yoga in Tulsa",
+    template: "%s | Studio 1 — Barre, Pilates & Yoga in Tulsa",
   },
   description:
-    "Studio 1 — Your Teachers. Your Community. Your Studio. Boutique fitness in Tulsa's Brookside offering Barre, TRX, Pilates & Yoga. Independently owned, not a franchise.",
+    "Studio 1 — Your Teachers. Your Community. Your Studio. Boutique fitness in Tulsa's Brookside offering Barre, Pilates & Yoga. Independently owned, not a franchise.",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: siteUrl,
     siteName: "Studio 1",
-    title: "Studio 1 — Barre, TRX, Pilates & Yoga in Tulsa",
+    title: "Studio 1 — Barre, Pilates & Yoga in Tulsa",
     description:
-      "Independent boutique fitness studio in Tulsa's Brookside neighborhood offering Barre, TRX, Pilates, and Yoga classes.",
+      "Independent boutique fitness studio in Tulsa's Brookside neighborhood offering Barre, Pilates, and Yoga classes.",
     images: [
       {
         url: "/images/hero-yoga.jpg",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Studio 1 — Barre, TRX, Pilates & Yoga in Tulsa",
+    title: "Studio 1 — Barre, Pilates & Yoga in Tulsa",
     description:
       "Independent boutique fitness studio in Tulsa's Brookside neighborhood.",
     images: ["/images/hero-yoga.jpg"],

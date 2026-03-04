@@ -18,13 +18,7 @@ const classTypes = [
       "Low-impact, high-intensity workout combining ballet-inspired movements with pilates and light weights. Build long, lean muscle.",
     image: "/images/class-barre.jpg",
   },
-  {
-    name: "TRX",
-    description:
-      "Suspension training using your body weight for a full-body workout. Build strength, balance, and flexibility with modifications for every level.",
-    image: "/images/class-trx.jpg",
-  },
-  {
+{
     name: "Pilates",
     description:
       "Core-focused movement emphasizing alignment, breath, and controlled movement. Strengthen and lengthen with mat-based Pilates.",
@@ -93,7 +87,7 @@ export function HomeContent() {
             transition={{ duration: 0.6, delay: 0 }}
             className="text-sm uppercase tracking-[0.2em] mb-4 text-white/80"
           >
-            Barre &middot; TRX &middot; Pilates &middot; Yoga
+            Barre &middot; Pilates &middot; Yoga
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -161,11 +155,11 @@ export function HomeContent() {
           <FadeIn className="text-center mb-12 md:mb-16">
             <h2 className="mb-4">Find Your Practice</h2>
             <p className="text-stone text-lg max-w-2xl mx-auto">
-              Four ways to move, strengthen, and restore. All levels welcome.
+              Three ways to move, strengthen, and restore. All levels welcome.
             </p>
           </FadeIn>
 
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {classTypes.map((classType) => (
               <StaggerItem key={classType.name}>
                 <div className="group bg-warm-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">

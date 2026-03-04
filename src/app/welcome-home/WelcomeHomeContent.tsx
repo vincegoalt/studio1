@@ -17,11 +17,11 @@ import {
 
 const instructors = [
   { name: "Emma Richardson", role: "Yoga" },
-  { name: "Michael Torres", role: "TRX" },
+  { name: "Michael Torres", role: "Strength" },
   { name: "Sophie Anderson", role: "Barre" },
   { name: "Rachel Kim", role: "Pilates" },
   { name: "David Chen", role: "Yoga" },
-  { name: "Amanda Foster", role: "TRX" },
+  { name: "Amanda Foster", role: "HIIT" },
 ];
 
 const faqs = [
@@ -48,7 +48,7 @@ const faqs = [
   {
     question: "What classes will Studio 1 offer?",
     answer:
-      "We offer Barre, TRX, Pilates, and Yoga — the same disciplines you loved at BYB. Our class schedule includes a variety of levels and styles, from gentle flow yoga to power vinyasa, from beginner barre to advanced TRX.",
+      "We offer Barre, Pilates, and Yoga — the same disciplines you loved at BYB. Our class schedule includes a variety of levels and styles, from gentle flow yoga to power vinyasa, from beginner barre to advanced pilates.",
   },
   {
     question: "Will pricing be the same?",
