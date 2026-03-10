@@ -97,7 +97,7 @@ export function AboutContent() {
             <FadeIn direction="left">
               <div className="rounded-2xl overflow-hidden shadow-lg relative aspect-[4/3]">
                 <Image
-                  src="/images/welcome-home-hero.jpg"
+                  src="/images/studio/studio-group-hug.jpg"
                   alt="Studio 1 community members together"
                   fill
                   className="object-cover"

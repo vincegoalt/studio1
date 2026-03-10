@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       "Independent boutique fitness studio in Tulsa's Brookside neighborhood offering Barre, Pilates, and Yoga classes.",
     images: [
       {
-        url: "/images/hero-yoga.jpg",
+        url: "/images/studio/studio-warrior-pose.jpg",
         width: 1200,
         height: 630,
         alt: "Studio 1 — Boutique Fitness in Tulsa's Brookside",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Studio 1 — Barre, Pilates & Yoga in Tulsa",
     description:
       "Independent boutique fitness studio in Tulsa's Brookside neighborhood.",
-    images: ["/images/hero-yoga.jpg"],
+    images: ["/images/studio/studio-warrior-pose.jpg"],
   },
   robots: {
     index: true,

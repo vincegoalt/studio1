@@ -16,7 +16,7 @@ const classes = [
       "Perfect for anyone looking to build strength without high impact. No dance experience required — our instructors guide you through every movement.",
     level: "All Levels Welcome",
     temperature: "72-75°F",
-    image: "/images/class-barre.jpg",
+    image: "/images/studio/studio-barre-wall.jpg",
   },
 {
     name: "Pilates",
@@ -28,7 +28,7 @@ const classes = [
       "Ideal for those seeking low-impact strength building, improved flexibility, and better posture. Excellent for injury prevention and rehabilitation.",
     level: "All Levels Welcome",
     temperature: "85-95°F (heated)",
-    image: "/images/class-pilates.jpg",
+    image: "/images/studio/studio-bridge-legs.jpg",
   },
   {
     name: "Yoga",
@@ -40,7 +40,7 @@ const classes = [
       "Whether you're brand new to yoga or have years of experience, we have a class for you. Our instructors offer modifications for every pose.",
     level: "All Levels Welcome",
     temperature: "85-95°F (heated classes available)",
-    image: "/images/class-yoga.jpg",
+    image: "/images/studio/studio-class-action.jpg",
   },
 ];
 

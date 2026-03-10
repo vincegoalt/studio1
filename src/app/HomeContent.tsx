@@ -16,19 +16,19 @@ const classTypes = [
     name: "Barre",
     description:
       "Low-impact, high-intensity workout combining ballet-inspired movements with pilates and light weights. Build long, lean muscle.",
-    image: "/images/class-barre.jpg",
+    image: "/images/studio/studio-barre-wall.jpg",
   },
 {
     name: "Pilates",
     description:
       "Core-focused movement emphasizing alignment, breath, and controlled movement. Strengthen and lengthen with mat-based Pilates.",
-    image: "/images/class-pilates.jpg",
+    image: "/images/studio/studio-bridge-legs.jpg",
   },
   {
     name: "Yoga",
     description:
       "From gentle flow to power vinyasa. Find your pace, build strength, and restore balance. Multiple styles offered weekly.",
-    image: "/images/class-yoga.jpg",
+    image: "/images/studio/studio-warrior-group.jpg",
   },
 ];
 
@@ -70,8 +70,8 @@ export function HomeContent() {
       >
         <motion.div style={{ y: backgroundY }} className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-yoga.jpg"
-            alt="Yoga class in a warm, inviting studio with natural light"
+            src="/images/studio/studio-warrior-pose.jpg"
+            alt="Warrior pose in Studio 1's bright Brookside studio"
             fill
             priority
             className="object-cover"
@@ -201,8 +201,8 @@ export function HomeContent() {
             <FadeIn direction="left" className="order-2 lg:order-1">
               <div className="rounded-2xl overflow-hidden shadow-lg relative aspect-[4/3]">
                 <Image
-                  src="/images/about-studio.jpg"
-                  alt="Instructor helping a student with yoga pose"
+                  src="/images/studio/studio-instructor-adjust.jpg"
+                  alt="Instructor helping a student with their form at Studio 1"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -270,8 +270,8 @@ export function HomeContent() {
       <section className="relative py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/coming-home.jpg"
-            alt="Brookside neighborhood building"
+            src="/images/studio/studio-space-plants.jpg"
+            alt="Studio 1's beautiful bright studio space with plants"
             fill
             className="object-cover"
             sizes="100vw"
