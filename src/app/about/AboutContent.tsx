@@ -11,14 +11,24 @@ import {
 
 const instructors = [
   {
+    name: "Angela Strode",
+    specialty: "Barre",
+    image: "/images/instructors/angela-strode.jpg",
+  },
+  {
     name: "Angie Schniers",
     specialty: "Barre & Pilates",
     image: "/images/instructors/angie-schniers.jpg",
   },
   {
-    name: "Angela Strode",
+    name: "Ashley Dawkins",
     specialty: "Barre",
-    image: "/images/instructors/angela-strode.jpg",
+    image: "/images/instructors/ashley-dawkins.jpg",
+  },
+  {
+    name: "Baillie Moeller",
+    specialty: "Pilates",
+    image: "/images/instructors/baillie-moeller.jpg",
   },
   {
     name: "Brooklyn Mason",
@@ -36,21 +46,6 @@ const instructors = [
     image: "/images/instructors/izzy-aston.jpg",
   },
   {
-    name: "Paige Patrzykont",
-    specialty: "Pilates",
-    image: "/images/instructors/paige-patrzykont.jpg",
-  },
-  {
-    name: "Baillie Moeller",
-    specialty: "Pilates",
-    image: "/images/instructors/baillie-moeller.jpg",
-  },
-  {
-    name: "Ashley Dawkins",
-    specialty: "Barre",
-    image: "/images/instructors/ashley-dawkins.jpg",
-  },
-  {
     name: "Lila Halliwell",
     specialty: "Barre",
     image: "/images/instructors/lila-halliwell.jpg",
@@ -59,6 +54,11 @@ const instructors = [
     name: "Melissa Cedja",
     specialty: "Barre",
     image: "/images/instructors/melissa-cedja.jpg",
+  },
+  {
+    name: "Paige Patrzykont",
+    specialty: "Pilates",
+    image: "/images/instructors/paige-patrzykont.jpg",
   },
 ];
 
