@@ -17,12 +17,16 @@ import {
 import { MindbodyRegistrationWidget } from "@/components/MindbodyRegistrationWidget";
 
 const instructors = [
-  { name: "Emma Richardson", role: "Yoga" },
-  { name: "Michael Torres", role: "Strength" },
-  { name: "Sophie Anderson", role: "Barre" },
-  { name: "Rachel Kim", role: "Pilates" },
-  { name: "David Chen", role: "Yoga" },
-  { name: "Amanda Foster", role: "HIIT" },
+  { name: "Angie Schniers", role: "Barre & Pilates" },
+  { name: "Angela Strode", role: "Barre" },
+  { name: "Brooklyn Mason", role: "Barre & Pilates" },
+  { name: "Brynna Tunnell", role: "Yoga" },
+  { name: "Izzy Aston", role: "Barre" },
+  { name: "Paige Patrzykont", role: "Pilates" },
+  { name: "Baillie Moeller", role: "Pilates" },
+  { name: "Ashley Dawkins", role: "Barre" },
+  { name: "Lila Halliwell", role: "Barre" },
+  { name: "Melissa Cedja", role: "Barre" },
 ];
 
 const faqs = [

@@ -176,61 +176,19 @@ export const offerSchemas = [
   },
 ];
 
+const org = { "@type": "Organization" as const, name: "Studio 1", url: siteUrl };
+
 export const personSchemas = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Emma Richardson",
-    jobTitle: "Yoga & Meditation Instructor",
-    worksFor: { "@type": "Organization", name: "Studio 1", url: siteUrl },
-    description:
-      "Emma has been teaching yoga for over 10 years, with a focus on vinyasa flow and mindfulness practices.",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Michael Torres",
-    jobTitle: "Strength & Conditioning Instructor",
-    worksFor: { "@type": "Organization", name: "Studio 1", url: siteUrl },
-    description:
-      "Michael brings 15 years of fitness experience to Studio 1. His classes challenge you to find strength you didn't know you had.",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Sophie Anderson",
-    jobTitle: "Barre Instructor",
-    worksFor: { "@type": "Organization", name: "Studio 1", url: siteUrl },
-    description:
-      "Sophie's barre classes are high-energy and empowering. A former dancer, she brings grace and precision to every movement.",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Rachel Kim",
-    jobTitle: "Pilates Instructor",
-    worksFor: { "@type": "Organization", name: "Studio 1", url: siteUrl },
-    description:
-      "Rachel is a certified Pilates instructor with expertise in mat-based Pilates. She focuses on alignment, breath, and controlled movement.",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "David Chen",
-    jobTitle: "Yoga Instructor",
-    worksFor: { "@type": "Organization", name: "Studio 1", url: siteUrl },
-    description:
-      "David specializes in power yoga and gentle flow. His classes meet you where you are, whether you're a beginner or advanced practitioner.",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Amanda Foster",
-    jobTitle: "HIIT & Fitness Instructor",
-    worksFor: { "@type": "Organization", name: "Studio 1", url: siteUrl },
-    description:
-      "Amanda's classes are dynamic and fun. She believes fitness should be enjoyable, and her energy is contagious.",
-  },
+  { "@context": "https://schema.org", "@type": "Person", name: "Angie Schniers", jobTitle: "Barre & Pilates Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Angela Strode", jobTitle: "Barre Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Brooklyn Mason", jobTitle: "Barre & Pilates Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Brynna Tunnell", jobTitle: "Yoga Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Izzy Aston", jobTitle: "Barre Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Paige Patrzykont", jobTitle: "Pilates Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Baillie Moeller", jobTitle: "Pilates Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Ashley Dawkins", jobTitle: "Barre Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Lila Halliwell", jobTitle: "Barre Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Melissa Cedja", jobTitle: "Barre Instructor", worksFor: org },
 ];
 
 export const placeSchema = {

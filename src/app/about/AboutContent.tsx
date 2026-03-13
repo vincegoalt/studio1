@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Heart, Users, MapPin, Award } from "lucide-react";
+import { Heart, Users, MapPin, Award } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
 import {
   StaggerContainer,
@@ -11,40 +11,54 @@ import {
 
 const instructors = [
   {
-    name: "Emma Richardson",
-    specialty: "Yoga & Meditation",
-    bio: "Emma has been teaching yoga for over 10 years, with a focus on vinyasa flow and mindfulness practices. She believes yoga is for every body.",
-    image: "/images/instructors/instructor-1.jpg",
+    name: "Angie Schniers",
+    specialty: "Barre & Pilates",
+    image: "/images/instructors/angie-schniers.jpg",
   },
   {
-    name: "Michael Torres",
-    specialty: "Strength & Conditioning",
-    bio: "Michael brings 15 years of fitness experience to Studio 1. His classes challenge you to find strength you didn't know you had.",
-    image: "/images/instructors/instructor-2.jpg",
-  },
-  {
-    name: "Sophie Anderson",
+    name: "Angela Strode",
     specialty: "Barre",
-    bio: "Sophie's barre classes are high-energy and empowering. A former dancer, she brings grace and precision to every movement.",
-    image: "/images/instructors/instructor-3.jpg",
+    image: "/images/instructors/angela-strode.jpg",
   },
   {
-    name: "Rachel Kim",
-    specialty: "Pilates",
-    bio: "Rachel is a certified Pilates instructor with expertise in mat-based Pilates. She focuses on alignment, breath, and controlled movement.",
-    image: "/images/instructors/instructor-4.jpg",
+    name: "Brooklyn Mason",
+    specialty: "Barre & Pilates",
+    image: "/images/instructors/brooklyn-mason.jpg",
   },
   {
-    name: "David Chen",
+    name: "Brynna Tunnell",
     specialty: "Yoga",
-    bio: "David specializes in power yoga and gentle flow. His classes meet you where you are, whether you're a beginner or advanced practitioner.",
-    image: "/images/instructors/instructor-5.jpg",
+    image: "/images/instructors/brynna-tunnell.jpg",
   },
   {
-    name: "Amanda Foster",
-    specialty: "HIIT & Fitness",
-    bio: "Amanda's classes are dynamic and fun. She believes fitness should be enjoyable, and her energy is contagious.",
-    image: "/images/instructors/instructor-6.jpg",
+    name: "Izzy Aston",
+    specialty: "Barre",
+    image: "/images/instructors/izzy-aston.jpg",
+  },
+  {
+    name: "Paige Patrzykont",
+    specialty: "Pilates",
+    image: "/images/instructors/paige-patrzykont.jpg",
+  },
+  {
+    name: "Baillie Moeller",
+    specialty: "Pilates",
+    image: "/images/instructors/baillie-moeller.jpg",
+  },
+  {
+    name: "Ashley Dawkins",
+    specialty: "Barre",
+    image: "/images/instructors/ashley-dawkins.jpg",
+  },
+  {
+    name: "Lila Halliwell",
+    specialty: "Barre",
+    image: "/images/instructors/lila-halliwell.jpg",
+  },
+  {
+    name: "Melissa Cedja",
+    specialty: "Barre",
+    image: "/images/instructors/melissa-cedja.jpg",
   },
 ];
 
@@ -108,39 +122,35 @@ export function AboutContent() {
             <FadeIn direction="right">
               <h2 className="mb-6">The Beginning of Studio 1</h2>
               <p className="text-stone leading-relaxed mb-6">
-                For more than a decade, a beloved barre, pilates, and yoga
-                studio built a strong community in Tulsa&apos;s prestigious
-                Center One shopping area. It became more than just a place to
-                work out &ndash; it was a second home where hundreds of people
-                found connection, strength, and a sense of belonging.
+                Studio 1 began with a simple idea: create a space where
+                movement feels personal, welcoming, and real.
               </p>
               <p className="text-stone leading-relaxed mb-6">
-                When the studio was transitioned to a corporate franchise in
-                January 2026, that close-knit community did not want to lose
-                this connection. Many of the teachers who had built lasting
-                relationships with their students over the years suddenly found
-                themselves without the personal touch that made the studio so
-                special.
+                We are a locally owned studio built by a group of experienced
+                instructors who love to teach and believe every class should
+                feel thoughtful, creative, and energizing. Our approach is
+                rooted in expertise, but it&apos;s also shaped by
+                connection&mdash;because the best workouts happen when people
+                feel comfortable, supported, and inspired.
               </p>
               <p className="text-stone leading-relaxed mb-6">
-                Studio 1 was created to preserve what mattered most: the same
-                dedicated teachers, the same prestigious, welcoming location,
-                and the same supportive community &ndash; now independently
-                owned and locally focused. This is a place where relationships
-                come first, teachers have a voice, and the studio experience
-                remains personal.
+                At Studio 1, no two classes are exactly the same. Our
+                instructors bring their own style, training, and personality
+                to every session, creating a dynamic experience that keeps you
+                challenged and engaged.
               </p>
-              <p className="text-stone leading-relaxed mb-8">
-                It&apos;s a homecoming to the spirit that made our community
-                meaningful.
+              <p className="text-stone leading-relaxed mb-6">
+                More than anything, Studio 1 is about community. It&apos;s a
+                place where people show up for themselves and for each other.
+                Friendships form, encouragement is shared, and movement becomes
+                something you look forward to.
               </p>
-              <Link
-                href="/welcome-home"
-                className="inline-flex items-center gap-2 text-sage font-medium hover:gap-3 transition-all"
-              >
-                For Former BYB Members
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <p className="text-stone leading-relaxed mb-2 font-medium text-charcoal">
+                This is more than a workout.
+              </p>
+              <p className="text-stone leading-relaxed mb-4 font-medium text-charcoal">
+                It&apos;s a space to move, connect, and belong.
+              </p>
             </FadeIn>
           </div>
         </div>
@@ -157,28 +167,25 @@ export function AboutContent() {
             </p>
           </FadeIn>
 
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
             {instructors.map((instructor) => (
               <StaggerItem key={instructor.name}>
                 <div className="bg-warm-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <div className="aspect-square overflow-hidden relative">
+                  <div className="aspect-[3/4] overflow-hidden relative">
                     <Image
                       src={instructor.image}
-                      alt={`${instructor.name}, ${instructor.specialty} instructor`}
+                      alt={`${instructor.name}, ${instructor.specialty} instructor at Studio 1`}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold mb-1">
+                  <div className="p-4 text-center">
+                    <h3 className="text-sm font-semibold mb-0.5">
                       {instructor.name}
                     </h3>
-                    <p className="text-sage text-sm font-medium mb-3">
+                    <p className="text-sage text-xs font-medium">
                       {instructor.specialty}
-                    </p>
-                    <p className="text-stone text-sm leading-relaxed">
-                      {instructor.bio}
                     </p>
                   </div>
                 </div>
