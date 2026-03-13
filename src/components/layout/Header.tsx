@@ -8,6 +8,7 @@ import { useLocalStorage } from "@/hooks/useLocalStorage";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/ui/Logo";
+import { MindbodyLoginWidget } from "@/components/MindbodyLoginWidget";
 
 const navLinks = [
   { label: "Classes", href: "/classes" },
@@ -116,7 +117,10 @@ export function Header() {
               ))}
             </div>
 
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex items-center gap-4">
+              <div className="text-sm font-medium text-charcoal hover:text-sage transition-colors">
+                <MindbodyLoginWidget />
+              </div>
               <Link
                 href="/schedule"
                 className="btn-primary"
@@ -181,8 +185,11 @@ export function Header() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navLinks.length * 0.05 }}
-                  className="pt-4"
+                  className="pt-4 space-y-3"
                 >
+                  <div className="text-center text-sm font-medium text-charcoal">
+                    <MindbodyLoginWidget />
+                  </div>
                   <Link
                     href="/schedule"
                     onClick={() => setIsMobileMenuOpen(false)}
