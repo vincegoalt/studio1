@@ -6,7 +6,7 @@ import { AboutContent } from "./AboutContent";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Studio 1's story. Independently owned boutique fitness studio in Tulsa's Brookside. Same teachers, same community, new name. Barre, Pilates & Yoga.",
+    "Learn about Studio 1's story. Independently owned boutique fitness studio in Tulsa's Center 1. Same teachers, same community, new name. Barre, Pilates & Yoga.",
   alternates: { canonical: "/about" },
 };
 

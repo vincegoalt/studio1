@@ -47,7 +47,7 @@ const testimonials = [
   },
   {
     quote:
-      "Finally, a boutique studio in Brookside that isn't a franchise. The energy here is completely different — warm, welcoming, real.",
+      "Finally, a boutique studio at Center 1 that isn't a franchise. The energy here is completely different — warm, welcoming, real.",
     author: "Michelle T.",
     detail: "Member since 2024",
   },
@@ -71,7 +71,7 @@ export function HomeContent() {
         <motion.div style={{ y: backgroundY }} className="absolute inset-0 z-0">
           <Image
             src="/images/studio/studio-warrior-pose.jpg"
-            alt="Warrior pose in Studio 1's bright Brookside studio"
+            alt="Warrior pose in Studio 1's bright Center 1 studio"
             fill
             priority
             className="object-cover"
@@ -107,7 +107,7 @@ export function HomeContent() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto"
           >
-            Independently owned boutique fitness in Tulsa&apos;s Brookside
+            Independently owned boutique fitness in Tulsa&apos;s Center 1
             neighborhood.
           </motion.p>
           <motion.div
@@ -288,7 +288,7 @@ export function HomeContent() {
             </h2>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
               After months in our temporary space, we&apos;re returning to where
-              it all began — 3509 S Peoria Ave, the heart of Brookside. Same
+              it all began — 3509 S Peoria Ave, the heart of Center 1. Same
               address, same community, same love. Just coming home.
             </p>
             <Link

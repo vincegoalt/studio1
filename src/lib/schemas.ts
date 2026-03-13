@@ -5,7 +5,7 @@ export const healthClubSchema = {
   "@type": ["HealthClub", "Organization"],
   name: "Studio 1",
   description:
-    "Independent boutique fitness studio in Tulsa's Brookside neighborhood offering Barre, Pilates, and Yoga classes.",
+    "Independent boutique fitness studio in Tulsa's Center 1 neighborhood offering Barre, Pilates, and Yoga classes.",
   url: siteUrl,
   telephone: "+1-918-555-0123",
   email: "hello@studio1tul.com",
@@ -50,7 +50,7 @@ export const courseSchemas = [
     "@type": "Course",
     name: "Barre Classes",
     description:
-      "Low-impact, high-intensity workout combining ballet-inspired movements, pilates, and light weights. Build long, lean muscle at Studio 1 in Tulsa's Brookside.",
+      "Low-impact, high-intensity workout combining ballet-inspired movements, pilates, and light weights. Build long, lean muscle at Studio 1 in Tulsa's Center 1.",
     provider: {
       "@type": "Organization",
       name: "Studio 1",
@@ -94,7 +94,7 @@ export const courseSchemas = [
     "@type": "Course",
     name: "Yoga Classes",
     description:
-      "From gentle flow to power vinyasa. Multiple styles offered weekly at Studio 1 in Tulsa's Brookside neighborhood. All levels welcome.",
+      "From gentle flow to power vinyasa. Multiple styles offered weekly at Studio 1 in Tulsa's Center 1 neighborhood. All levels welcome.",
     provider: {
       "@type": "Organization",
       name: "Studio 1",
@@ -119,7 +119,7 @@ export const offerSchemas = [
     "@type": "Offer",
     name: "Monthly Unlimited Membership",
     description:
-      "Unlimited monthly access to all Barre, Pilates, and Yoga classes at Studio 1 in Tulsa's Brookside.",
+      "Unlimited monthly access to all Barre, Pilates, and Yoga classes at Studio 1 in Tulsa's Center 1.",
     price: "129.00",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
@@ -134,7 +134,7 @@ export const offerSchemas = [
     "@type": "Offer",
     name: "Couples Unlimited Membership",
     description:
-      "Unlimited monthly access for two people in the same household to all classes at Studio 1 in Tulsa's Brookside.",
+      "Unlimited monthly access for two people in the same household to all classes at Studio 1 in Tulsa's Center 1.",
     price: "189.00",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
@@ -164,7 +164,7 @@ export const offerSchemas = [
     "@type": "Offer",
     name: "10-Class Pack",
     description:
-      "10 classes to use at Studio 1 in Tulsa's Brookside. All class types included. Expires in 90 days.",
+      "10 classes to use at Studio 1 in Tulsa's Center 1. All class types included. Expires in 90 days.",
     price: "180.00",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
@@ -238,7 +238,7 @@ export const placeSchema = {
   "@type": "Place",
   name: "Studio 1",
   description:
-    "Independent boutique fitness studio in Tulsa's Brookside neighborhood.",
+    "Independent boutique fitness studio in Tulsa's Center 1 neighborhood.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "3509 S Peoria Ave, 2nd Floor",
@@ -280,7 +280,7 @@ export const faqSchema = {
       name: "Where is Studio 1 located?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We currently have a temporary location in the Center 1 Building above Oren in Brookside. Our permanent home at 3509 S Peoria Ave (the original BYB location) will open on August 1, 2026.",
+        text: "We currently have a temporary location in the Center 1 Building above Oren at Center 1. Our permanent home at 3509 S Peoria Ave (the original BYB location) will open on August 1, 2026.",
       },
     },
     {

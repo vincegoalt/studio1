@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s | Studio 1 — Barre, Pilates & Yoga in Tulsa",
   },
   description:
-    "Studio 1 — Your Teachers. Your Community. Your Studio. Boutique fitness in Tulsa's Brookside offering Barre, Pilates & Yoga. Independently owned, not a franchise.",
+    "Studio 1 — Your Teachers. Your Community. Your Studio. Boutique fitness in Tulsa's Center 1 offering Barre, Pilates & Yoga. Independently owned, not a franchise.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     siteName: "Studio 1",
     title: "Studio 1 — Barre, Pilates & Yoga in Tulsa",
     description:
-      "Independent boutique fitness studio in Tulsa's Brookside neighborhood offering Barre, Pilates, and Yoga classes.",
+      "Independent boutique fitness studio in Tulsa's Center 1 neighborhood offering Barre, Pilates, and Yoga classes.",
     images: [
       {
         url: "/images/studio/studio-warrior-pose.jpg",
         width: 1200,
         height: 630,
-        alt: "Studio 1 — Boutique Fitness in Tulsa's Brookside",
+        alt: "Studio 1 — Boutique Fitness at Tulsa's Center 1",
       },
     ],
   },
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Studio 1 — Barre, Pilates & Yoga in Tulsa",
     description:
-      "Independent boutique fitness studio in Tulsa's Brookside neighborhood.",
+      "Independent boutique fitness studio in Tulsa's Center 1 neighborhood.",
     images: ["/images/studio/studio-warrior-pose.jpg"],
   },
   robots: {

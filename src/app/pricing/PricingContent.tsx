@@ -7,6 +7,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/animations/StaggerContainer";
+import { MindbodyRegistrationWidget } from "@/components/MindbodyRegistrationWidget";
 
 const pricingOptions = [
   {
@@ -113,13 +114,13 @@ export function PricingContent() {
                     <p className="text-white/70 text-sm">Student</p>
                   </div>
                 </div>
-                <Link
-                  href="/schedule"
+                <a
+                  href="#register"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-sage font-medium text-sm uppercase tracking-wider rounded-lg transition-all duration-300 hover:bg-white/90 hover:-translate-y-0.5"
                 >
                   Get Started
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
+                </a>
                 <p className="text-white/60 text-sm mt-4">
                   Promo rates apply to your first 3 months of membership
                 </p>
@@ -173,16 +174,33 @@ export function PricingContent() {
                     ))}
                   </ul>
 
-                  <Link
-                    href="/schedule"
+                  <a
+                    href="#register"
                     className="btn-secondary w-full text-center"
                   >
                     {option.cta}
-                  </Link>
+                  </a>
                 </div>
               </StaggerItem>
             ))}
           </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Registration Widget */}
+      <section id="register" className="section-padding bg-cream scroll-mt-24">
+        <div className="container-custom">
+          <FadeIn>
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="mb-4">Create Your Account</h2>
+              <p className="text-stone mb-8">
+                Sign up to start booking classes at Studio 1.
+              </p>
+              <div className="bg-warm-white rounded-2xl p-6 md:p-8 shadow-sm">
+                <MindbodyRegistrationWidget />
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 

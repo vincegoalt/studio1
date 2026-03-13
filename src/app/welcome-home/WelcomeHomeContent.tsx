@@ -14,6 +14,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { MindbodyRegistrationWidget } from "@/components/MindbodyRegistrationWidget";
 
 const instructors = [
   { name: "Emma Richardson", role: "Yoga" },
@@ -38,7 +39,7 @@ const faqs = [
   {
     question: "Where is Studio 1 located?",
     answer:
-      "We currently have a temporary location in the Center 1 Building above Oren in Brookside. Our permanent home at 3509 S Peoria Ave (the original BYB location) will open on August 1, 2026. Both locations are in the heart of Tulsa's Brookside neighborhood.",
+      "We currently have a temporary location in the Center 1 Building above Oren at Center 1. Our permanent home at 3509 S Peoria Ave (the original BYB location) will open on August 1, 2026. Both locations are in the heart of Tulsa's Center 1 area.",
   },
   {
     question: "Do I need to create a new account?",
@@ -225,21 +226,28 @@ export function WelcomeHomeContent() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Registration + Final CTA */}
       <section className="py-20 md:py-24 bg-sand">
-        <div className="container-custom text-center">
+        <div className="container-custom">
           <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-charcoal">
-              Come Home
-            </h2>
-            <p className="text-lg text-stone max-w-2xl mx-auto mb-8">
-              Your mat is waiting. Your community is waiting. Your teachers are
-              waiting. Welcome home.
-            </p>
-            <Link href="/schedule" className="btn-primary">
-              Book Your First Class
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-charcoal">
+                Come Home
+              </h2>
+              <p className="text-lg text-stone max-w-2xl mx-auto">
+                Your mat is waiting. Your community is waiting. Your teachers are
+                waiting. Create your account and book your first class.
+              </p>
+            </div>
+            <div className="max-w-2xl mx-auto bg-warm-white rounded-2xl p-6 md:p-8 shadow-sm mb-8">
+              <MindbodyRegistrationWidget />
+            </div>
+            <div className="text-center">
+              <Link href="/schedule" className="btn-primary">
+                View Full Schedule
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
           </FadeIn>
         </div>
       </section>

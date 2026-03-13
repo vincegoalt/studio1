@@ -4,7 +4,7 @@ import { ContactContent } from "./ContactContent";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Studio 1. Questions about classes, pricing, or memberships? We'd love to hear from you. Call, email, or visit us in Tulsa's Brookside.",
+    "Get in touch with Studio 1. Questions about classes, pricing, or memberships? We'd love to hear from you. Call, email, or visit us in Tulsa's Center 1.",
   alternates: { canonical: "/contact" },
 };
 

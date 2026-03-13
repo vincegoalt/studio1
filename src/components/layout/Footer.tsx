@@ -130,7 +130,7 @@ export function Footer() {
               &copy; {new Date().getFullYear()} Studio 1. All rights reserved.
             </p>
             <p className="text-pebble text-sm">
-              Independently owned in Tulsa&apos;s Brookside neighborhood
+              Independently owned at Tulsa&apos;s Center 1
             </p>
           </div>
         </div>

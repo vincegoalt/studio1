@@ -40,3 +40,5 @@ next-env.d.ts
 # Kimi Vite reference build (keep for reference during migration)
 /app/node_modules/
 /app/dist/
+
+.vercel

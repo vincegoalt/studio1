@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { MindbodyScheduleWidget } from "@/components/MindbodyScheduleWidget";
 
 type ClassEntry = {
   type: "Barre" | "Pilates" | "Yoga";
@@ -148,23 +149,73 @@ function MobileClassCard({
 export function ScheduleContent() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-12 md:pt-40 md:pb-16 bg-cream">
-        <div className="container-custom text-center">
+      {/* Mindbody Booking Widget */}
+      <section className="pt-32 pb-12 md:pt-40 md:pb-16 bg-sand">
+        <div className="container-custom">
           <FadeIn>
-            <h1 className="mb-6">Class Schedule</h1>
-            <p className="text-lg md:text-xl text-stone max-w-2xl mx-auto">
-              Find your class, book your spot, and show up. All levels welcome.
+            <h2 className="text-2xl font-semibold mb-4 text-center">Book a Class</h2>
+            <p className="text-stone mb-8 max-w-xl mx-auto text-center">
+              Pick a class below to reserve your spot. New to Studio 1?{" "}
+              <Link href="/pricing" className="text-sage font-medium hover:underline">
+                View our pricing
+              </Link>{" "}
+              first.
             </p>
+            <div className="max-w-4xl mx-auto bg-warm-white rounded-2xl p-4 md:p-8 shadow-sm">
+              <MindbodyScheduleWidget />
+            </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Legend */}
-      <section className="bg-cream pb-4">
+      {/* Class Types Preview */}
+      <section className="section-padding bg-cream">
         <div className="container-custom">
+          <FadeIn className="text-center mb-12">
+            <h2 className="mb-4">Not Sure Which Class to Try?</h2>
+            <p className="text-stone">
+              Learn more about each class type and find the perfect fit for you.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-2xl mx-auto">
+              {["Barre", "Pilates", "Yoga"].map((className) => (
+                <Link
+                  key={className}
+                  href="/classes"
+                  className="bg-warm-white rounded-xl p-6 text-center hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                >
+                  <span className="font-semibold text-charcoal">
+                    {className}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.3} className="text-center mt-8">
+            <Link
+              href="/classes"
+              className="inline-flex items-center gap-2 text-sage font-medium hover:gap-3 transition-all"
+            >
+              Explore All Classes
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Static Schedule Overview */}
+      <section className="section-padding bg-sand">
+        <div className="container-custom">
+          <FadeIn className="text-center mb-8">
+            <h2 className="mb-4">Weekly Schedule at a Glance</h2>
+          </FadeIn>
+
+          {/* Legend */}
           <FadeIn>
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm mb-8">
               {(["Barre", "Pilates", "Yoga"] as const).map((type) => (
                 <div key={type} className="flex items-center gap-2">
                   <span
@@ -175,14 +226,10 @@ export function ScheduleContent() {
               ))}
             </div>
           </FadeIn>
-        </div>
-      </section>
 
-      {/* Desktop Schedule Table */}
-      <section className="section-padding bg-cream hidden lg:block">
-        <div className="container-custom">
+          {/* Desktop Schedule Table */}
           <FadeIn>
-            <div className="max-w-6xl mx-auto overflow-x-auto">
+            <div className="max-w-6xl mx-auto overflow-x-auto hidden lg:block">
               <table className="w-full border-collapse">
                 <thead>
                   <tr>
@@ -223,14 +270,10 @@ export function ScheduleContent() {
               </table>
             </div>
           </FadeIn>
-        </div>
-      </section>
 
-      {/* Mobile Schedule (day-by-day) */}
-      <section className="section-padding bg-cream lg:hidden">
-        <div className="container-custom">
+          {/* Mobile Schedule (day-by-day) */}
           <FadeIn>
-            <div className="space-y-8">
+            <div className="lg:hidden space-y-8">
               {DAYS.map((day) => {
                 const dayClasses = TIME_SLOTS.map((time) => ({
                   time,
@@ -268,65 +311,6 @@ export function ScheduleContent() {
                 );
               })}
             </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Booking CTA */}
-      <section className="section-padding bg-sand">
-        <div className="container-custom text-center">
-          <FadeIn>
-            <h2 className="text-2xl font-semibold mb-4">Ready to Book?</h2>
-            <p className="text-stone mb-6 max-w-xl mx-auto">
-              New to Studio 1? Join by April 1 and get your first 3 months
-              at reduced membership rates.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/pricing" className="btn-primary">
-                View Pricing & Offers
-              </Link>
-              <Link href="/contact" className="btn-secondary">
-                Contact Us
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Class Types Preview */}
-      <section className="section-padding bg-cream">
-        <div className="container-custom">
-          <FadeIn className="text-center mb-12">
-            <h2 className="mb-4">Not Sure Which Class to Try?</h2>
-            <p className="text-stone">
-              Learn more about each class type and find the perfect fit for you.
-            </p>
-          </FadeIn>
-
-          <FadeIn delay={0.2}>
-            <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-2xl mx-auto">
-              {["Barre", "Pilates", "Yoga"].map((className) => (
-                <Link
-                  key={className}
-                  href="/classes"
-                  className="bg-warm-white rounded-xl p-6 text-center hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-                >
-                  <span className="font-semibold text-charcoal">
-                    {className}
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.3} className="text-center mt-8">
-            <Link
-              href="/classes"
-              className="inline-flex items-center gap-2 text-sage font-medium hover:gap-3 transition-all"
-            >
-              Explore All Classes
-              <ArrowRight className="w-4 h-4" />
-            </Link>
           </FadeIn>
         </div>
       </section>

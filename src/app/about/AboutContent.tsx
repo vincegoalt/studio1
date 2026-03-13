@@ -69,9 +69,9 @@ const values = [
   },
   {
     icon: MapPin,
-    title: "Brookside Rooted",
+    title: "Center 1 Rooted",
     description:
-      "Part of this neighborhood for over a decade. We're proud to call Tulsa's Brookside our home.",
+      "Part of this neighborhood for over a decade. We're proud to call Tulsa's Center 1 our home.",
   },
 ];
 
@@ -84,7 +84,7 @@ export function AboutContent() {
           <FadeIn>
             <h1 className="mb-6">Our Story</h1>
             <p className="text-lg md:text-xl text-stone max-w-2xl mx-auto">
-              Independently owned. Community driven. Brookside rooted.
+              Independently owned. Community driven. Center 1 rooted.
             </p>
           </FadeIn>
         </div>
@@ -106,24 +106,33 @@ export function AboutContent() {
               </div>
             </FadeIn>
             <FadeIn direction="right">
-              <h2 className="mb-6">From BYB to Studio 1</h2>
+              <h2 className="mb-6">The Beginning of Studio 1</h2>
               <p className="text-stone leading-relaxed mb-6">
-                Balance Yoga Barre built a community in Tulsa&apos;s Brookside
-                neighborhood for over a decade. It was more than a studio — it
-                was a second home for hundreds of people who found connection,
-                strength, and belonging within its walls.
+                For more than a decade, a beloved barre, pilates, and yoga
+                studio built a strong community in Tulsa&apos;s prestigious
+                Center One shopping area. It became more than just a place to
+                work out &ndash; it was a second home where hundreds of people
+                found connection, strength, and a sense of belonging.
               </p>
               <p className="text-stone leading-relaxed mb-6">
-                When BYB merged with the Power Life franchise in January 2026,
-                that community was displaced. The teachers who had built
-                relationships with their students for years were suddenly part of
-                a corporate system. The personal touch that made BYB special was
-                at risk of being lost.
+                When the studio was transitioned to a corporate franchise in
+                January 2026, that close-knit community did not want to lose
+                this connection. Many of the teachers who had built lasting
+                relationships with their students over the years suddenly found
+                themselves without the personal touch that made the studio so
+                special.
+              </p>
+              <p className="text-stone leading-relaxed mb-6">
+                Studio 1 was created to preserve what mattered most: the same
+                dedicated teachers, the same prestigious, welcoming location,
+                and the same supportive community &ndash; now independently
+                owned and locally focused. This is a place where relationships
+                come first, teachers have a voice, and the studio experience
+                remains personal.
               </p>
               <p className="text-stone leading-relaxed mb-8">
-                Studio 1 is the answer: same teachers, same space, same
-                community — independently owned, not a franchise. We&apos;re
-                coming home to what made this place special in the first place.
+                It&apos;s a homecoming to the spirit that made our community
+                meaningful.
               </p>
               <Link
                 href="/welcome-home"

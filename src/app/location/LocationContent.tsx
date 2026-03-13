@@ -10,10 +10,10 @@ export function LocationContent() {
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-cream">
         <div className="container-custom text-center">
           <FadeIn>
-            <h1 className="mb-6">Find Us in Brookside</h1>
+            <h1 className="mb-6">Find Us at Center 1</h1>
             <p className="text-lg md:text-xl text-stone max-w-2xl mx-auto">
               Two locations. One community. In the heart of Tulsa&apos;s
-              Brookside neighborhood.
+              Center 1 area.
             </p>
           </FadeIn>
         </div>
@@ -47,7 +47,7 @@ export function LocationContent() {
                         Center 1 Building
                       </p>
                       <p className="text-stone text-sm">
-                        Above Oren, Brookside, Tulsa
+                        Above Oren, Center 1, Tulsa
                       </p>
                     </div>
                   </div>
@@ -71,7 +71,7 @@ export function LocationContent() {
                 </div>
 
                 <a
-                  href="https://maps.google.com/?q=Center+1+Building+Brookside+Tulsa"
+                  href="https://maps.google.com/?q=Center+1+Building+Tulsa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary w-full text-center"
@@ -94,7 +94,7 @@ export function LocationContent() {
                   Permanent Location
                 </h2>
                 <p className="text-white/80 mb-6">
-                  Our forever home in the heart of Brookside.
+                  Our forever home in the heart of Center 1.
                 </p>
 
                 <div className="space-y-4 mb-6">
@@ -199,7 +199,7 @@ export function LocationContent() {
                 </div>
                 <h3 className="font-semibold mb-2">Free 2-Hour Parking</h3>
                 <p className="text-stone text-sm">
-                  Available in nearby lots throughout Brookside.
+                  Available in nearby lots throughout Center 1.
                 </p>
               </div>
             </div>
@@ -212,12 +212,12 @@ export function LocationContent() {
         <div className="container-custom text-center text-white">
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              The Brookside Neighborhood
+              The Center 1 Neighborhood
             </h2>
             <p className="text-lg text-white/90 max-w-3xl mx-auto mb-8">
               Located in the heart of Tulsa&apos;s most walkable neighborhood —
               steps from local shops, restaurants, and cafes. Make your workout
-              part of a perfect Brookside day.
+              part of a perfect Center 1 day.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-white/80 text-sm">
               <span className="px-4 py-2 bg-white/10 rounded-full">
