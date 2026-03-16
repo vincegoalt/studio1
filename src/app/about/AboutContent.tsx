@@ -46,14 +46,34 @@ const instructors = [
     image: "/images/instructors/izzy-aston.jpg",
   },
   {
+    name: "Karina",
+    specialty: "Yoga",
+    image: null,
+  },
+  {
     name: "Lila Halliwell",
     specialty: "Barre",
     image: "/images/instructors/lila-halliwell.jpg",
   },
   {
+    name: "Lindsey",
+    specialty: "Barre",
+    image: null,
+  },
+  {
+    name: "Maddi",
+    specialty: "Pilates",
+    image: null,
+  },
+  {
     name: "Melissa Cedja",
     specialty: "Barre",
     image: "/images/instructors/melissa-cedja.jpg",
+  },
+  {
+    name: "Morgan",
+    specialty: "Barre",
+    image: null,
   },
   {
     name: "Paige Patrzykont",
@@ -172,13 +192,21 @@ export function AboutContent() {
               <StaggerItem key={instructor.name}>
                 <div className="bg-warm-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                   <div className="aspect-[3/4] overflow-hidden relative">
-                    <Image
-                      src={instructor.image}
-                      alt={`${instructor.name}, ${instructor.specialty} instructor at Studio 1`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                    />
+                    {instructor.image ? (
+                      <Image
+                        src={instructor.image}
+                        alt={`${instructor.name}, ${instructor.specialty} instructor at Studio 1`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-sage-light to-sage flex items-center justify-center">
+                        <span className="text-4xl md:text-5xl font-bold text-white/80">
+                          {instructor.name.split(" ").map((n) => n[0]).join("")}
+                        </span>
+                      </div>
+                    )}
                   </div>
                   <div className="p-4 text-center">
                     <h3 className="text-sm font-semibold mb-0.5">

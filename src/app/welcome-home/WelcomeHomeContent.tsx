@@ -24,8 +24,12 @@ const instructors = [
   { name: "Brooklyn Mason", role: "Barre" },
   { name: "Brynna Tunnell", role: "Yoga" },
   { name: "Izzy Aston", role: "Barre" },
+  { name: "Karina", role: "Yoga" },
   { name: "Lila Halliwell", role: "Barre" },
+  { name: "Lindsey", role: "Barre" },
+  { name: "Maddi", role: "Pilates" },
   { name: "Melissa Cedja", role: "Barre" },
+  { name: "Morgan", role: "Barre" },
   { name: "Paige Patrzykont", role: "Pilates" },
 ];
 
