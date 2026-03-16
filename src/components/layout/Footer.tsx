@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
+import { Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 
 const navLinks = [
@@ -42,15 +42,6 @@ export function Footer() {
                 aria-label="Follow us on Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://facebook.com/studio1tul"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-pebble hover:text-white transition-colors"
-                aria-label="Follow us on Facebook"
-              >
-                <Facebook className="w-5 h-5" />
               </a>
             </div>
           </div>

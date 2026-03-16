@@ -17,7 +17,7 @@ const instructors = [
   },
   {
     name: "Angie Schniers",
-    specialty: "Barre & Pilates",
+    specialty: "Barre",
     image: "/images/instructors/angie-schniers.jpg",
   },
   {
@@ -32,7 +32,7 @@ const instructors = [
   },
   {
     name: "Brooklyn Mason",
-    specialty: "Barre & Pilates",
+    specialty: "Barre",
     image: "/images/instructors/brooklyn-mason.jpg",
   },
   {

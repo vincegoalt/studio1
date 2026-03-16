@@ -7,7 +7,7 @@ import {
   Mail,
   Clock,
   Instagram,
-  Facebook,
+
   Send,
 } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
@@ -242,15 +242,6 @@ export function ContactContent() {
                       aria-label="Follow us on Instagram"
                     >
                       <Instagram className="w-5 h-5" />
-                    </a>
-                    <a
-                      href="https://facebook.com/studio1tul"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center w-10 h-10 bg-sage/10 rounded-lg text-sage hover:bg-sage hover:text-white transition-all"
-                      aria-label="Follow us on Facebook"
-                    >
-                      <Facebook className="w-5 h-5" />
                     </a>
                   </div>
                 </div>

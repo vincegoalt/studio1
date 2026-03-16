@@ -40,7 +40,6 @@ export const healthClubSchema = {
   image: `${siteUrl}/images/hero-yoga.jpg`,
   sameAs: [
     "https://instagram.com/studio1tul",
-    "https://facebook.com/studio1tul",
   ],
 };
 
@@ -179,9 +178,9 @@ export const offerSchemas = [
 const org = { "@type": "Organization" as const, name: "Studio 1", url: siteUrl };
 
 export const personSchemas = [
-  { "@context": "https://schema.org", "@type": "Person", name: "Angie Schniers", jobTitle: "Barre & Pilates Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Angie Schniers", jobTitle: "Barre Instructor", worksFor: org },
   { "@context": "https://schema.org", "@type": "Person", name: "Angela Strode", jobTitle: "Barre Instructor", worksFor: org },
-  { "@context": "https://schema.org", "@type": "Person", name: "Brooklyn Mason", jobTitle: "Barre & Pilates Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Brooklyn Mason", jobTitle: "Barre Instructor", worksFor: org },
   { "@context": "https://schema.org", "@type": "Person", name: "Brynna Tunnell", jobTitle: "Yoga Instructor", worksFor: org },
   { "@context": "https://schema.org", "@type": "Person", name: "Izzy Aston", jobTitle: "Barre Instructor", worksFor: org },
   { "@context": "https://schema.org", "@type": "Person", name: "Paige Patrzykont", jobTitle: "Pilates Instructor", worksFor: org },

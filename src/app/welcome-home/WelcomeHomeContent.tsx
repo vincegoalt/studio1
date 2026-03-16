@@ -18,10 +18,10 @@ import { MindbodyRegistrationWidget } from "@/components/MindbodyRegistrationWid
 
 const instructors = [
   { name: "Angela Strode", role: "Barre" },
-  { name: "Angie Schniers", role: "Barre & Pilates" },
+  { name: "Angie Schniers", role: "Barre" },
   { name: "Ashley Dawkins", role: "Barre" },
   { name: "Baillie Moeller", role: "Pilates" },
-  { name: "Brooklyn Mason", role: "Barre & Pilates" },
+  { name: "Brooklyn Mason", role: "Barre" },
   { name: "Brynna Tunnell", role: "Yoga" },
   { name: "Izzy Aston", role: "Barre" },
   { name: "Lila Halliwell", role: "Barre" },
@@ -58,7 +58,7 @@ const faqs = [
   {
     question: "Will pricing be the same?",
     answer:
-      "We've worked hard to keep pricing competitive and accessible. Monthly Unlimited is $129/month, Couples is $189/month, and Student is $99/month. We also offer a 10-class pack for $180. Join by April 1 to lock in reduced rates for your first 3 months!",
+      "We've worked hard to keep pricing competitive and accessible. Monthly Unlimited is $129/month, Premier Couples Unlimited is $189/month. We also offer 10-class packs for $180, 5-class packs for $100, and $22 drop-ins. Join by April 1 to lock in reduced rates for your first 3 months!",
   },
 ];
 
@@ -172,14 +172,17 @@ export function WelcomeHomeContent() {
                   <div>
                     <p className="text-2xl font-bold">$99<span className="text-base font-normal">/mo</span></p>
                     <p className="text-white/70 text-sm">Monthly Unlimited</p>
+                    <p className="text-white/50 text-xs mt-1">then $129/mo</p>
                   </div>
                   <div>
                     <p className="text-2xl font-bold">$159<span className="text-base font-normal">/mo</span></p>
                     <p className="text-white/70 text-sm">Couples Unlimited</p>
+                    <p className="text-white/50 text-xs mt-1">then $189/mo</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">$79<span className="text-base font-normal">/mo</span></p>
-                    <p className="text-white/70 text-sm">Student</p>
+                    <p className="text-2xl font-bold">$150</p>
+                    <p className="text-white/70 text-sm">10-Class Pack</p>
+                    <p className="text-white/50 text-xs mt-1">limit 2 per person</p>
                   </div>
                 </div>
               </div>

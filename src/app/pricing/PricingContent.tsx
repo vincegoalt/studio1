@@ -22,10 +22,10 @@ const pricingOptions = [
       "Priority booking",
     ],
     cta: "Choose Monthly",
-    promo: "Join by April 1 — first 3 months $99/mo",
+    promo: "Join by April 1 — $99/mo for 3 months, then $129/mo",
   },
   {
-    name: "Couples Unlimited",
+    name: "Premier Couples Unlimited",
     price: "$189",
     period: "per month",
     description: "Unlimited access for two people in the same household.",
@@ -36,21 +36,7 @@ const pricingOptions = [
       "Same household required",
     ],
     cta: "Choose Couples",
-    promo: "Join by April 1 — first 3 months $159/mo",
-  },
-  {
-    name: "Student",
-    price: "$99",
-    period: "per month",
-    description: "Unlimited classes at a student-friendly price.",
-    features: [
-      "Unlimited classes",
-      "Auto-renews monthly",
-      "All class types included",
-      "Valid student ID required",
-    ],
-    cta: "Choose Student",
-    promo: "Join by April 1 — first 3 months $79/mo",
+    promo: "Join by April 1 — $159/mo for 3 months, then $189/mo",
   },
   {
     name: "10-Class Pack",
@@ -59,11 +45,35 @@ const pricingOptions = [
     description: "Flexible option for regular practitioners.",
     features: [
       "10 classes to use anytime",
-      "90-day expiration",
       "All class types included",
       "Flexible scheduling",
     ],
     cta: "Buy 10 Classes",
+    promo: "Sign up by April 1 — 10 classes for $150 (limit 2)",
+  },
+  {
+    name: "5-Class Pack",
+    price: "$100",
+    period: "5 classes",
+    description: "Great way to get started or stay flexible.",
+    features: [
+      "5 classes to use anytime",
+      "All class types included",
+      "Flexible scheduling",
+    ],
+    cta: "Buy 5 Classes",
+  },
+  {
+    name: "Drop-In",
+    price: "$22",
+    period: "per class",
+    description: "No commitment. Just show up and move.",
+    features: [
+      "Single class access",
+      "All class types included",
+      "No membership required",
+    ],
+    cta: "Drop In",
   },
 ];
 
@@ -100,18 +110,21 @@ export function PricingContent() {
                 <p className="text-xl text-white/90 mb-6">
                   Lock in reduced rates for your first 3 months
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-lg mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-xl mx-auto">
                   <div>
                     <p className="text-2xl font-bold">$99<span className="text-base font-normal">/mo</span></p>
                     <p className="text-white/70 text-sm">Monthly Unlimited</p>
+                    <p className="text-white/50 text-xs mt-1">then $129/mo</p>
                   </div>
                   <div>
                     <p className="text-2xl font-bold">$159<span className="text-base font-normal">/mo</span></p>
                     <p className="text-white/70 text-sm">Couples Unlimited</p>
+                    <p className="text-white/50 text-xs mt-1">then $189/mo</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">$79<span className="text-base font-normal">/mo</span></p>
-                    <p className="text-white/70 text-sm">Student</p>
+                    <p className="text-2xl font-bold">$150</p>
+                    <p className="text-white/70 text-sm">10-Class Pack</p>
+                    <p className="text-white/50 text-xs mt-1">limit 2 per person</p>
                   </div>
                 </div>
                 <a

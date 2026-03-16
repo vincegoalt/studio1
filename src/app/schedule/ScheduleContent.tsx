@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/animations/FadeIn";
 import { MindbodyScheduleWidget } from "@/components/MindbodyScheduleWidget";
 
 type ClassEntry = {
-  type: "Barre" | "Pilates" | "Yoga";
+  type: "Barre" | "Barre + Core" | "Pilates" | "Yoga";
   instructor: string;
   /** Override time displayed (for Sat/Sun classes at non-standard times) */
   displayTime?: string;
@@ -68,12 +68,12 @@ const schedule: Record<string, Record<string, ScheduleSlot>> = {
     Wed: { type: "Barre", instructor: "Izzy" },
     Thu: { type: "Pilates", instructor: "Maddi" },
     Fri: null,
-    Sat: {
-      type: "Pilates",
+    Sat: null,
+    Sun: {
+      type: "Barre + Core",
       instructor: "Brooklyn / Angie",
       displayTime: "4:00 PM",
     },
-    Sun: null,
   },
   "5:30 PM": {
     Mon: { type: "Barre", instructor: "Angela" },
@@ -81,19 +81,21 @@ const schedule: Record<string, Record<string, ScheduleSlot>> = {
     Wed: { type: "Barre", instructor: "Izzy" },
     Thu: { type: "Barre", instructor: "Angela" },
     Fri: null,
-    Sat: { type: "Yoga", instructor: "Brynna", displayTime: "5:00 PM" },
-    Sun: null,
+    Sat: null,
+    Sun: { type: "Yoga", instructor: "Brynna", displayTime: "5:00 PM" },
   },
 };
 
 const classColors: Record<ClassEntry["type"], { bg: string; text: string; border: string }> = {
   Barre: { bg: "bg-terracotta/10", text: "text-charcoal", border: "border-terracotta/30" },
+  "Barre + Core": { bg: "bg-terracotta/10", text: "text-charcoal", border: "border-terracotta/30" },
   Pilates: { bg: "bg-sage/10", text: "text-charcoal", border: "border-sage/30" },
   Yoga: { bg: "bg-[#D4C5A9]/20", text: "text-charcoal", border: "border-clay/30" },
 };
 
 const classDot: Record<ClassEntry["type"], string> = {
   Barre: "bg-terracotta",
+  "Barre + Core": "bg-terracotta",
   Pilates: "bg-sage",
   Yoga: "bg-clay",
 };

@@ -76,7 +76,7 @@ export function Header() {
                   href="/schedule"
                   className="flex items-center gap-2 text-white text-sm font-medium hover:underline"
                 >
-                  <span>Now Open at Center 1! Free classes through March 16</span>
+                  <span>Now Open at Center 1! Free classes through March 22</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <button
