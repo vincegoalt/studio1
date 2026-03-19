@@ -35,21 +35,18 @@ const classTypes = [
 const testimonials = [
   {
     quote:
-      "After BYB closed, I thought I'd lost my community. Studio 1 brought us all back together. It feels like coming home.",
-    author: "Sarah M.",
-    detail: "Member since 2019",
+      "Walking into Studio 1 feels like coming home. I'm always surrounded by familiar faces, friends, and a community that truly supports each other. That sense of connection means everything to me and is what makes Studio 1 so special.",
+    author: "Leslie W.",
   },
   {
     quote:
-      "The teachers here truly care. They know your name, they know your practice, they know you. That's rare.",
-    author: "Jennifer K.",
-    detail: "Member since 2021",
+      "The teachers at Studio 1 truly care. They know your name, they know your abilities and how to modify, they know YOU! That's rare.",
+    author: "Francie M.",
   },
   {
     quote:
-      "Finally, a boutique studio at Center 1 that isn't a franchise. The energy here is completely different — warm, welcoming, real.",
-    author: "Michelle T.",
-    detail: "Member since 2024",
+      "All of the instructors at Studio 1 are incredibly experienced and bring so much knowledge to every class. Whether it's barre, Pilates, or Yoga, you're guaranteed an amazing workout every time.",
+    author: "Navid M.",
   },
 ];
 
@@ -212,16 +209,17 @@ export function HomeContent() {
             <FadeIn direction="right" className="order-1 lg:order-2">
               <h2 className="mb-6">More Than a Studio</h2>
               <p className="text-stone leading-relaxed mb-6">
-                Studio 1 is the independent continuation of Tulsa&apos;s beloved
-                yoga community. Same teachers. Same space. Same heart — just a
-                new name and a commitment to keeping our community locally owned,
-                not franchise-operated.
+                Studio 1 is a locally owned space rooted in community,
+                connection, and intentional movement. Same teachers. Same space.
+                Same heart — just a renewed commitment to staying independent
+                and community-driven.
               </p>
               <p className="text-stone leading-relaxed mb-8">
-                When Balance Yoga Barre merged with a national franchise, our
-                community was displaced. Studio 1 is the answer: a return to
-                what made BYB special, independently run by the people who built
-                it.
+                We believe you deserve the freedom to choose how you move, in a
+                place that values creativity, personal attention, and truly
+                challenging classes. Studio 1 is built by the people who are
+                here with you every day — creating an experience that feels
+                supportive, focused, and uniquely yours.
               </p>
               <Link
                 href="/about"
@@ -239,9 +237,9 @@ export function HomeContent() {
       <section className="section-padding bg-cream">
         <div className="container-custom">
           <FadeIn className="text-center mb-12 md:mb-16">
-            <h2 className="mb-4">What Our Community Says</h2>
+            <h2 className="mb-4">What Our Community Says About Us</h2>
             <p className="text-stone text-lg max-w-2xl mx-auto">
-              Real stories from real members who found their home at Studio 1.
+              Real stories from the people who make Studio 1 special.
             </p>
           </FadeIn>
 
@@ -257,7 +255,6 @@ export function HomeContent() {
                     <p className="font-semibold text-charcoal">
                       {testimonial.author}
                     </p>
-                    <p className="text-pebble text-sm">{testimonial.detail}</p>
                   </div>
                 </div>
               </StaggerItem>

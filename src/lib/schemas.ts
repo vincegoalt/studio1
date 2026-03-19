@@ -26,13 +26,19 @@ export const healthClubSchema = {
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "06:00",
-      closes: "20:00",
+      opens: "05:30",
+      closes: "18:30",
     },
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Saturday", "Sunday"],
-      opens: "08:00",
+      dayOfWeek: "Saturday",
+      opens: "08:30",
+      closes: "11:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "09:30",
       closes: "18:00",
     },
   ],
@@ -188,6 +194,10 @@ export const personSchemas = [
   { "@context": "https://schema.org", "@type": "Person", name: "Ashley Dawkins", jobTitle: "Barre Instructor", worksFor: org },
   { "@context": "https://schema.org", "@type": "Person", name: "Lila Halliwell", jobTitle: "Barre Instructor", worksFor: org },
   { "@context": "https://schema.org", "@type": "Person", name: "Melissa Cedja", jobTitle: "Barre Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Karina Donato", jobTitle: "Yoga Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Lindsey Smith", jobTitle: "Barre Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Maddi Macie", jobTitle: "Pilates Instructor", worksFor: org },
+  { "@context": "https://schema.org", "@type": "Person", name: "Morgan Murry", jobTitle: "Barre Instructor", worksFor: org },
 ];
 
 export const placeSchema = {

@@ -58,13 +58,19 @@ export function LocationContent() {
                         <span className="font-medium text-charcoal">
                           Mon-Fri:
                         </span>{" "}
-                        6:00 AM - 8:00 PM
+                        5:30 AM - 6:30 PM
                       </p>
                       <p className="text-stone text-sm">
                         <span className="font-medium text-charcoal">
-                          Sat-Sun:
+                          Sat:
                         </span>{" "}
-                        8:00 AM - 6:00 PM
+                        8:30 AM - 11:00 AM
+                      </p>
+                      <p className="text-stone text-sm">
+                        <span className="font-medium text-charcoal">
+                          Sun:
+                        </span>{" "}
+                        9:30 AM - 6:00 PM
                       </p>
                     </div>
                   </div>
@@ -113,11 +119,15 @@ export function LocationContent() {
                     <Clock className="w-5 h-5 text-white/80 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="text-white/80 text-sm">
-                        <span className="font-medium">Mon-Fri:</span> 6:00 AM -
-                        8:00 PM
+                        <span className="font-medium">Mon-Fri:</span> 5:30 AM -
+                        6:30 PM
                       </p>
                       <p className="text-white/80 text-sm">
-                        <span className="font-medium">Sat-Sun:</span> 8:00 AM -
+                        <span className="font-medium">Sat:</span> 8:30 AM -
+                        11:00 AM
+                      </p>
+                      <p className="text-white/80 text-sm">
+                        <span className="font-medium">Sun:</span> 9:30 AM -
                         6:00 PM
                       </p>
                     </div>

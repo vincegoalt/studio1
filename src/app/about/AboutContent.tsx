@@ -46,7 +46,7 @@ const instructors = [
     image: "/images/instructors/izzy-aston.jpg",
   },
   {
-    name: "Karina",
+    name: "Karina Donato",
     specialty: "Yoga",
     image: null,
   },
@@ -56,12 +56,12 @@ const instructors = [
     image: "/images/instructors/lila-halliwell.jpg",
   },
   {
-    name: "Lindsey",
+    name: "Lindsey Smith",
     specialty: "Barre",
     image: null,
   },
   {
-    name: "Maddi",
+    name: "Maddi Macie",
     specialty: "Pilates",
     image: null,
   },
@@ -71,7 +71,7 @@ const instructors = [
     image: "/images/instructors/melissa-cedja.jpg",
   },
   {
-    name: "Morgan",
+    name: "Morgan Murry",
     specialty: "Barre",
     image: null,
   },

@@ -70,14 +70,14 @@ const schedule: Record<string, Record<string, ScheduleSlot>> = {
     Fri: null,
     Sat: null,
     Sun: {
-      type: "Barre + Core",
-      instructor: "Brooklyn / Angie",
+      type: "Pilates",
+      instructor: "Paige",
       displayTime: "4:00 PM",
     },
   },
   "5:30 PM": {
     Mon: { type: "Barre", instructor: "Angela" },
-    Tue: { type: "Barre", instructor: "Angela / Angie" },
+    Tue: { type: "Barre", instructor: "Angie" },
     Wed: { type: "Barre", instructor: "Izzy" },
     Thu: { type: "Barre", instructor: "Angela" },
     Fri: null,

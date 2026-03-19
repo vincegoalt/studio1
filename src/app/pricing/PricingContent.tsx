@@ -49,7 +49,6 @@ const pricingOptions = [
       "Flexible scheduling",
     ],
     cta: "Buy 10 Classes",
-    promo: "Sign up by April 1 — 10 classes for $150 (limit 2)",
   },
   {
     name: "5-Class Pack",
@@ -110,7 +109,7 @@ export function PricingContent() {
                 <p className="text-xl text-white/90 mb-6">
                   Lock in reduced rates for your first 3 months
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 max-w-md mx-auto">
                   <div>
                     <p className="text-2xl font-bold">$99<span className="text-base font-normal">/mo</span></p>
                     <p className="text-white/70 text-sm">Monthly Unlimited</p>
@@ -120,11 +119,6 @@ export function PricingContent() {
                     <p className="text-2xl font-bold">$159<span className="text-base font-normal">/mo</span></p>
                     <p className="text-white/70 text-sm">Couples Unlimited</p>
                     <p className="text-white/50 text-xs mt-1">then $189/mo</p>
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold">$150</p>
-                    <p className="text-white/70 text-sm">10-Class Pack</p>
-                    <p className="text-white/50 text-xs mt-1">limit 2 per person</p>
                   </div>
                 </div>
                 <a
@@ -153,9 +147,9 @@ export function PricingContent() {
             </p>
           </FadeIn>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-            {pricingOptions.map((option) => (
-              <StaggerItem key={option.name}>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+            {pricingOptions.map((option, index) => (
+              <StaggerItem key={option.name} className={pricingOptions.length % 2 !== 0 && index === pricingOptions.length - 1 ? "md:col-span-2 md:max-w-md md:mx-auto" : ""}>
                 <div className="bg-warm-white rounded-2xl p-8 h-full flex flex-col border-2 border-transparent hover:border-sage/20 transition-all duration-300">
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold mb-2">
