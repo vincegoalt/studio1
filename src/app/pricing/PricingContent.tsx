@@ -1,13 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { Check, ArrowRight, Sparkles } from "lucide-react";
-import { FadeIn } from "@/components/animations/FadeIn";
+import { Check, ArrowRight, Sparkles, UserPlus } from "lucide-react";
+import { FadeIn } from "@/components/animations/FadeIn"
 import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/animations/StaggerContainer";
-import { MindbodyRegistrationWidget } from "@/components/MindbodyRegistrationWidget";
+
+const MINDBODY_REGISTER_URL =
+  "https://signin.mindbodyonline.com/signin?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DMindbody.BrandedWeb.Legacy%26scope%3Dopenid%2520profile%2520email%2520offline_access%2520Mindbody.Api.Connect%2520Mindbody.Api.Payments%2520Mindbody.Api.Rest%2520Mindbody.Identity.UserGateway%2520Identity.Legacy.Gateway%26response_type%3Dcode%26response_mode%3Dform_post%26subscriberId%3D5752206%26redirect_uri%3Dhttps%253A%252F%252Fcart.mindbodyonline.com%252Fidentity_callback";
 
 const pricingOptions = [
   {
@@ -181,12 +183,18 @@ export function PricingContent() {
                     ))}
                   </ul>
 
-                  <a
-                    href="/schedule"
+                  <button
+                    onClick={() =>
+                      window.open(
+                        MINDBODY_REGISTER_URL,
+                        "mindbody-register",
+                        "width=500,height=700,scrollbars=yes,resizable=yes"
+                      )
+                    }
                     className="btn-secondary w-full text-center"
                   >
                     {option.cta}
-                  </a>
+                  </button>
                 </div>
               </StaggerItem>
             ))}
@@ -194,7 +202,7 @@ export function PricingContent() {
         </div>
       </section>
 
-      {/* Registration Widget */}
+      {/* Register CTA */}
       <section id="register" className="section-padding bg-cream scroll-mt-24">
         <div className="container-custom">
           <FadeIn>
@@ -203,9 +211,34 @@ export function PricingContent() {
               <p className="text-stone mb-8">
                 Sign up to start booking classes at Studio 1.
               </p>
-              <div className="bg-warm-white rounded-2xl p-6 md:p-8 shadow-sm">
-                <MindbodyRegistrationWidget />
-              </div>
+              <button
+                onClick={() =>
+                  window.open(
+                    MINDBODY_REGISTER_URL,
+                    "mindbody-register",
+                    "width=500,height=700,scrollbars=yes,resizable=yes"
+                  )
+                }
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-sage text-white font-medium text-sm uppercase tracking-wider rounded-lg transition-all duration-300 hover:bg-sage/90 hover:-translate-y-0.5"
+              >
+                <UserPlus className="w-5 h-5" />
+                Register Now
+              </button>
+              <p className="text-pebble text-sm mt-4">
+                Already have an account?{" "}
+                <button
+                  onClick={() =>
+                    window.open(
+                      MINDBODY_REGISTER_URL,
+                      "mindbody-login",
+                      "width=500,height=700,scrollbars=yes,resizable=yes"
+                    )
+                  }
+                  className="text-sage font-medium hover:underline"
+                >
+                  Log in
+                </button>
+              </p>
             </div>
           </FadeIn>
         </div>
