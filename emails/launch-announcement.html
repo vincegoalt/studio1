@@ -14,44 +14,43 @@
   </noscript>
   <![endif]-->
   <style>
-    body { margin: 0; padding: 0; background-color: #F5F0EB; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
-    .wrapper { width: 100%; background-color: #F5F0EB; padding: 40px 0; }
+    body { margin: 0; padding: 0; background-color: #E8EFF6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+    .wrapper { width: 100%; background-color: #E8EFF6; padding: 40px 0; }
     .container { max-width: 600px; margin: 0 auto; background-color: #FFFFFF; border-radius: 16px; overflow: hidden; }
-    .header { background-color: #6B8F71; padding: 40px 32px; text-align: center; }
-    .header h1 { color: #FFFFFF; font-size: 28px; font-weight: 700; margin: 0 0 8px 0; }
-    .header p { color: rgba(255,255,255,0.85); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
+    .header { background-color: #4A7FB5; padding: 40px 32px; text-align: center; }
+    .header img { max-width: 200px; height: auto; }
     .body { padding: 40px 32px; }
-    .body p { color: #4A4A4A; font-size: 16px; line-height: 1.6; margin: 0 0 16px 0; }
-    .body h2 { color: #2D2D2D; font-size: 22px; font-weight: 700; margin: 24px 0 12px 0; }
-    .body h3 { color: #6B8F71; font-size: 18px; font-weight: 600; margin: 20px 0 8px 0; }
-    .divider { border: none; border-top: 1px solid #E8E2DA; margin: 28px 0; }
+    .body p { color: #4A5B6E; font-size: 16px; line-height: 1.6; margin: 0 0 16px 0; }
+    .body h2 { color: #1A2A3D; font-size: 22px; font-weight: 700; margin: 32px 0 12px 0; }
+    .body h3 { color: #4A7FB5; font-size: 18px; font-weight: 600; margin: 20px 0 8px 0; }
+    .body a { color: #4A7FB5; }
+    .divider { border: none; border-top: 1px solid #D0DAE5; margin: 28px 0; }
     .pricing-grid { width: 100%; border-collapse: collapse; margin: 16px 0; }
-    .pricing-grid td { padding: 12px 16px; vertical-align: top; }
-    .pricing-card { background-color: #FAF8F5; border-radius: 12px; padding: 20px; text-align: center; }
-    .pricing-card .price { font-size: 28px; font-weight: 700; color: #2D2D2D; margin: 0; }
-    .pricing-card .price span { font-size: 14px; font-weight: 400; color: #7A7A7A; }
-    .pricing-card .name { font-size: 14px; font-weight: 600; color: #6B8F71; margin: 4px 0 0 0; }
-    .pricing-card .after { font-size: 12px; color: #999; margin: 4px 0 0 0; }
-    .promo-badge { display: inline-block; background-color: #6B8F71; color: #FFFFFF; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; }
-    .class-packs { background-color: #FAF8F5; border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .pricing-grid td { padding: 8px; vertical-align: top; }
+    .pricing-card { background-color: #F5F8FC; border: 1px solid #D0DAE5; border-radius: 12px; padding: 24px 16px; text-align: center; }
+    .pricing-card .price { font-size: 32px; font-weight: 700; color: #1A2A3D; margin: 0; }
+    .pricing-card .price span { font-size: 14px; font-weight: 400; color: #7A8B9E; }
+    .pricing-card .name { font-size: 14px; font-weight: 600; color: #4A7FB5; margin: 6px 0 0 0; }
+    .pricing-card .after { font-size: 12px; color: #7A8B9E; margin: 4px 0 0 0; }
+    .promo-badge { display: inline-block; background-color: #4A7FB5; color: #FFFFFF; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; vertical-align: middle; margin-left: 6px; }
+    .class-packs { background-color: #F5F8FC; border: 1px solid #D0DAE5; border-radius: 12px; padding: 20px 24px; margin: 16px 0; }
     .class-packs table { width: 100%; border-collapse: collapse; }
-    .class-packs td { padding: 6px 0; color: #4A4A4A; font-size: 15px; }
-    .class-packs td:last-child { text-align: right; font-weight: 600; color: #2D2D2D; }
-    .cta-button { display: inline-block; background-color: #6B8F71; color: #FFFFFF; font-size: 14px; font-weight: 600; text-decoration: none; padding: 16px 40px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1.5px; margin: 8px 0; }
-    .cta-button:hover { background-color: #5A7E60; }
+    .class-packs td { padding: 8px 0; color: #4A5B6E; font-size: 15px; border-bottom: 1px solid #E8EFF6; }
+    .class-packs tr:last-child td { border-bottom: none; }
+    .class-packs td:last-child { text-align: right; font-weight: 700; color: #1A2A3D; }
+    .class-packs .note { font-size: 12px; color: #7A8B9E; padding-top: 2px; border-bottom: 1px solid #E8EFF6; }
+    .cta-button { display: inline-block; background-color: #4A7FB5; color: #FFFFFF; font-size: 14px; font-weight: 600; text-decoration: none; padding: 16px 44px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1.5px; margin: 8px 0; }
     .cta-section { text-align: center; padding: 32px 0 8px 0; }
-    .highlight-box { background-color: #6B8F71; border-radius: 12px; padding: 24px; text-align: center; margin: 24px 0; }
+    .highlight-box { background-color: #4A7FB5; border-radius: 12px; padding: 28px; text-align: center; margin: 28px 0; }
     .highlight-box p { color: #FFFFFF; margin: 0 0 4px 0; }
     .highlight-box .big { font-size: 20px; font-weight: 700; }
     .highlight-box .small { font-size: 13px; color: rgba(255,255,255,0.7); }
-    .footer { padding: 24px 32px; text-align: center; border-top: 1px solid #E8E2DA; }
-    .footer p { color: #999; font-size: 13px; line-height: 1.5; margin: 0 0 8px 0; }
-    .footer a { color: #6B8F71; text-decoration: none; }
-    .social-link { display: inline-block; margin: 0 8px; color: #6B8F71; text-decoration: none; font-size: 13px; }
+    .footer { padding: 24px 32px; text-align: center; background-color: #F5F8FC; }
+    .footer p { color: #7A8B9E; font-size: 13px; line-height: 1.5; margin: 0 0 8px 0; }
+    .footer a { color: #4A7FB5; text-decoration: none; }
     @media only screen and (max-width: 620px) {
       .body { padding: 28px 20px; }
       .header { padding: 32px 20px; }
-      .header h1 { font-size: 24px; }
       .pricing-grid td { display: block; width: 100%; padding: 6px 0; }
     }
   </style>
@@ -62,8 +61,7 @@
 
       <!-- Header -->
       <div class="header">
-        <p>Barre &middot; Pilates &middot; Yoga</p>
-        <h1>Studio 1</h1>
+        <img src="https://studio1-lyart.vercel.app/_next/image?url=%2Fimages%2Flogo-studio1-white.png&w=384&q=75&dpl=dpl_5eTja5FxRNg9KaHARPiFkc19PH6B" alt="Studio 1" width="200">
       </div>
 
       <!-- Body -->
@@ -75,16 +73,22 @@
 
         <hr class="divider">
 
-        <!-- Soft Opening -->
-        <h2>🎉 You're Invited: Soft Opening</h2>
-        <p>Before we open our doors to the public, we're hosting a <strong>soft opening</strong> exclusively for our early community. Keep an eye on your inbox — your personal invitation is coming soon with all the details.</p>
+        <h2>You're Invited: Open House — March 27</h2>
+        <p>Join us for an open house celebrating the opening of Studio 1. Enjoy sips and snacks, an express barre class at 4:15, fun giveaways, and special membership offers.</p>
+
+        <div style="background-color: #F5F8FC; border: 1px solid #D0DAE5; border-radius: 12px; padding: 24px; text-align: center; margin: 16px 0;">
+          <p style="font-size: 13px; font-weight: 600; color: #4A7FB5; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 4px 0;">MARCH</p>
+          <p style="font-size: 48px; font-weight: 700; color: #1A2A3D; margin: 0; line-height: 1;">27</p>
+          <p style="font-size: 16px; font-weight: 600; color: #4A5B6E; margin: 8px 0 0 0;">4pm &ndash; 6pm</p>
+        </div>
+
+        <p style="text-align: center; color: #4A5B6E; font-size: 15px; font-style: italic; margin-top: 12px;">Come move with us, explore the space, and celebrate the start of something new!</p>
 
         <hr class="divider">
 
-        <!-- Website Launch -->
-        <h2>🌐 Website Goes Live March 20</h2>
-        <p>Our website launches on <strong>Friday, March 20, 2026</strong> at <a href="https://studio1tul.com" style="color: #6B8F71; text-decoration: none; font-weight: 600;">studio1tul.com</a>. From there you can:</p>
-        <ul style="color: #4A4A4A; font-size: 16px; line-height: 1.8; padding-left: 20px;">
+        <h2>Website Goes Live March 20</h2>
+        <p>Our website launches on <strong>Friday, March 20, 2026</strong> at <a href="https://studio1tul.com" style="font-weight: 600;">studio1tul.com</a>. From there you can:</p>
+        <ul style="color: #4A5B6E; font-size: 16px; line-height: 2; padding-left: 20px; margin: 8px 0 16px 0;">
           <li>Purchase memberships and class packs</li>
           <li>Browse the full class schedule</li>
           <li>Sign up and book classes directly (or through Mindbody)</li>
@@ -92,8 +96,7 @@
 
         <hr class="divider">
 
-        <!-- Pricing -->
-        <h2>💰 Launch Pricing — Sign Up by April 1</h2>
+        <h2>Launch Pricing — Sign Up by April 1</h2>
         <p>Lock in these special rates when you sign up before April 1:</p>
 
         <h3>Memberships</h3>
@@ -120,19 +123,18 @@
         <div class="class-packs">
           <table role="presentation">
             <tr>
-              <td>10-Class Pack <span class="promo-badge">Launch</span></td>
+              <td>10-Class Pack<span class="promo-badge">Launch</span></td>
               <td>$150</td>
             </tr>
             <tr>
-              <td style="font-size: 12px; color: #999; padding-top: 0;">Limit 2 per customer &middot; $180 after April 1</td>
-              <td></td>
+              <td class="note" colspan="2">Limit 1 per customer &middot; $180 after April 1</td>
             </tr>
             <tr>
               <td>5-Class Pack</td>
               <td>$100</td>
             </tr>
             <tr>
-              <td>Drop-In (single class)</td>
+              <td>Drop-In</td>
               <td>$22</td>
             </tr>
           </table>
@@ -143,26 +145,23 @@
           <p class="small">Promo rates apply to your first 3 months of membership</p>
         </div>
 
-        <!-- CTA -->
         <div class="cta-section">
-          <p style="color: #4A4A4A; font-size: 16px; margin-bottom: 16px;">Ready to secure your spot?</p>
-          <a href="https://studio1tul.com/pricing" class="cta-button">View Pricing &amp; Sign Up</a>
-          <p style="color: #999; font-size: 13px; margin-top: 12px;">Or book directly on <a href="https://studio1tul.com/schedule" style="color: #6B8F71; font-weight: 600;">our schedule</a></p>
+          <p style="color: #1A2A3D; font-size: 16px; font-weight: 600; margin-bottom: 16px;">Ready to secure your spot?</p>
+          <a href="https://studio1tul.com/pricing" class="cta-button" style="display: inline-block; background-color: #4A7FB5; color: #FFFFFF; font-size: 14px; font-weight: 600; text-decoration: none; padding: 16px 44px; border-radius: 8px; text-transform: uppercase; letter-spacing: 1.5px;">View Pricing &amp; Sign Up</a>
+          <p style="color: #7A8B9E; font-size: 13px; margin-top: 16px;">Or book directly on <a href="https://studio1tul.com/schedule" style="font-weight: 600;">our schedule</a></p>
         </div>
 
         <hr class="divider">
 
         <p>We're so grateful you've been part of this from the beginning. Studio 1 was built for people like you — and we can't wait to keep moving together.</p>
 
-        <p>See you on the mat,<br><strong>The Studio 1 Team</strong></p>
+        <p style="margin-bottom: 0;">See you on the mat,<br><strong style="color: #1A2A3D;">The Studio 1 Team</strong></p>
 
       </div>
 
       <!-- Footer -->
       <div class="footer">
-        <p>
-          <a class="social-link" href="https://instagram.com/studio1tul">@studio1tul on Instagram</a>
-        </p>
+        <p><a href="https://instagram.com/studio1tul" style="font-weight: 600;">@studio1tul</a> on Instagram</p>
         <p>Studio 1 &middot; Center 1 Building &middot; Tulsa, OK</p>
         <p><a href="https://studio1tul.com">studio1tul.com</a></p>
       </div>
