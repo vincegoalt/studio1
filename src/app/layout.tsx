@@ -77,15 +77,6 @@ export default function RootLayout({
         <JsonLd data={healthClubSchema} />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
-        {/* Suppress Mindbody healcode.js errors that crash during SPA navigation */}
-        <Script id="healcode-error-guard" strategy="beforeInteractive">
-          {`window.addEventListener('error', function(e) {
-            if (e.filename && e.filename.indexOf('healcode') !== -1) {
-              e.preventDefault();
-              return true;
-            }
-          });`}
-        </Script>
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
