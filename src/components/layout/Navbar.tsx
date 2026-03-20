@@ -9,8 +9,8 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Classes", href: "/classes" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Schedule", href: "/schedule" },
+  { label: "Pricing", href: "/pricing", forceReload: true },
+  { label: "Schedule", href: "/schedule", forceReload: true },
   { label: "About", href: "/about" },
   { label: "Location", href: "/location" },
   { label: "Contact", href: "/contact" },
@@ -47,17 +47,21 @@ export function Navbar() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-sage ${
-                  showTransparentBg ? "text-white/90" : "text-charcoal"
-                } ${pathname === link.href ? "text-sage" : ""}`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const className = `text-sm font-medium transition-colors hover:text-sage ${
+                showTransparentBg ? "text-white/90" : "text-charcoal"
+              } ${pathname === link.href ? "text-sage" : ""}`;
+
+              return link.forceReload ? (
+                <a key={link.href} href={link.href} className={className}>
+                  {link.label}
+                </a>
+              ) : (
+                <Link key={link.href} href={link.href} className={className}>
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
 
           <div className="hidden lg:block">
@@ -102,26 +106,38 @@ export function Navbar() {
             />
             <motion.div className="absolute right-0 top-0 h-full w-[280px] bg-cream shadow-xl pt-20 px-6">
               <div className="flex flex-col gap-4">
-                {navLinks.map((link, index) => (
-                  <motion.div
-                    key={link.href}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                  >
-                    <Link
-                      href={link.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`block py-3 text-lg font-medium border-b border-warm-gray transition-colors hover:text-sage ${
-                        pathname === link.href
-                          ? "text-sage"
-                          : "text-charcoal"
-                      }`}
+                {navLinks.map((link, index) => {
+                  const mobileClassName = `block py-3 text-lg font-medium border-b border-warm-gray transition-colors hover:text-sage ${
+                    pathname === link.href ? "text-sage" : "text-charcoal"
+                  }`;
+
+                  return (
+                    <motion.div
+                      key={link.href}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
                     >
-                      {link.label}
-                    </Link>
-                  </motion.div>
-                ))}
+                      {link.forceReload ? (
+                        <a
+                          href={link.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className={mobileClassName}
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className={mobileClassName}
+                        >
+                          {link.label}
+                        </Link>
+                      )}
+                    </motion.div>
+                  );
+                })}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}

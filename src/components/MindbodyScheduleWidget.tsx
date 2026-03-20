@@ -4,40 +4,45 @@ import { useEffect, useRef, useState } from "react";
 
 export function MindbodyScheduleWidget() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
+  const [status, setStatus] = useState<"loading" | "ready" | "error">(
+    "loading"
+  );
 
   useEffect(() => {
     let timeoutId: ReturnType<typeof setTimeout>;
 
-    function loadWidget() {
-      // If the script is already on the page, remove it so it re-initializes
-      const existingScript = document.querySelector(
-        'script[src="https://brandedweb.mindbodyonline.com/embed/widget.js"]'
-      );
-      if (existingScript) {
-        existingScript.remove();
-      }
+    // Check if widget script already exists (client-side nav scenario)
+    const existingScript = document.querySelector(
+      'script[src*="brandedweb.mindbodyonline.com/embed/widget.js"]'
+    );
 
-      const script = document.createElement("script");
-      script.src = "https://brandedweb.mindbodyonline.com/embed/widget.js";
-      script.async = true;
-      script.onload = () => {
-        setStatus("ready");
-      };
-      script.onerror = () => {
-        setStatus("error");
-      };
-      document.body.appendChild(script);
-
-      // Fallback: if widget container is still empty after 10s, show error
-      timeoutId = setTimeout(() => {
-        if (containerRef.current && !containerRef.current.querySelector("iframe")) {
-          setStatus("error");
-        }
-      }, 10000);
+    if (existingScript) {
+      // Script was loaded on a previous page — force reload for clean init
+      existingScript.remove();
+      window.location.reload();
+      return;
     }
 
-    loadWidget();
+    const script = document.createElement("script");
+    script.src = "https://brandedweb.mindbodyonline.com/embed/widget.js";
+    script.async = true;
+    script.onload = () => {
+      setStatus("ready");
+    };
+    script.onerror = () => {
+      setStatus("error");
+    };
+    document.body.appendChild(script);
+
+    // Fallback timeout
+    timeoutId = setTimeout(() => {
+      if (
+        containerRef.current &&
+        !containerRef.current.querySelector("iframe")
+      ) {
+        setStatus("error");
+      }
+    }, 10000);
 
     return () => {
       clearTimeout(timeoutId);
@@ -58,10 +63,7 @@ export function MindbodyScheduleWidget() {
             Schedule widget is temporarily unavailable.
           </p>
           <button
-            onClick={() => {
-              setStatus("loading");
-              window.location.reload();
-            }}
+            onClick={() => window.location.reload()}
             className="text-sage text-sm font-medium underline"
           >
             Refresh to try again
