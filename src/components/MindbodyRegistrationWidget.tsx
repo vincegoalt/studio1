@@ -38,7 +38,7 @@ export function MindbodyRegistrationWidget() {
     const widgetHost = containerRef.current.querySelector(".hc-host");
     if (widgetHost) {
       widgetHost.innerHTML =
-        '<healcode-widget data-type="registrations" data-widget-partner="object" data-widget-id="6c172080c984" data-widget-version="0"></healcode-widget>';
+        '<healcode-widget data-type="registrations" data-widget-partner="object" data-widget-id="6c172623c984" data-widget-version="0"></healcode-widget>';
     }
 
     // Load healcode.js after the element is in the DOM

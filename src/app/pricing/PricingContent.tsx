@@ -7,6 +7,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/animations/StaggerContainer";
+import { MindbodyRegistrationWidget } from "@/components/MindbodyRegistrationWidget";
 
 const pricingOptions = [
   {
@@ -193,22 +194,18 @@ export function PricingContent() {
         </div>
       </section>
 
-      {/* Get Started CTA */}
+      {/* Registration Widget */}
       <section id="register" className="section-padding bg-cream scroll-mt-24">
         <div className="container-custom">
           <FadeIn>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="mb-4">Ready to Get Started?</h2>
+              <h2 className="mb-4">Create Your Account</h2>
               <p className="text-stone mb-8">
-                Head to our schedule to create your account and book your first class.
+                Sign up to start booking classes at Studio 1.
               </p>
-              <a
-                href="/schedule"
-                className="inline-flex items-center justify-center px-8 py-4 bg-sage text-white font-medium text-sm uppercase tracking-wider rounded-lg transition-all duration-300 hover:bg-sage/90 hover:-translate-y-0.5"
-              >
-                View Schedule &amp; Sign Up
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
+              <div className="bg-warm-white rounded-2xl p-6 md:p-8 shadow-sm">
+                <MindbodyRegistrationWidget />
+              </div>
             </div>
           </FadeIn>
         </div>
