@@ -1,4 +1,7 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -12,15 +15,13 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Integrate with Resend or Formspree
-    // Example with Resend:
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send({
-    //   from: 'Studio 1 <noreply@studio1tul.com>',
-    //   to: 'hello@studio1tul.com',
-    //   subject: `Contact Form: ${name}`,
-    //   text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\n\nMessage:\n${message}`,
-    // });
+    await resend.emails.send({
+      from: "Studio 1 Contact Form <onboarding@resend.dev>",
+      to: "angie.schniers@gmail.com",
+      replyTo: email,
+      subject: `Contact Form: ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "N/A"}\n\nMessage:\n${message}`,
+    });
 
     return NextResponse.json({ success: true });
   } catch {
