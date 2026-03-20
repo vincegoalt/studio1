@@ -11,28 +11,21 @@ export function MindbodyScheduleWidget() {
   useEffect(() => {
     let timeoutId: ReturnType<typeof setTimeout>;
 
-    // Check if widget script already exists (client-side nav scenario)
-    const existingScript = document.querySelector(
-      'script[src*="brandedweb.mindbodyonline.com/embed/widget.js"]'
-    );
+    // Remove any existing widget scripts so we get a fresh load
+    document
+      .querySelectorAll(
+        'script[src*="brandedweb.mindbodyonline.com/embed/widget.js"]'
+      )
+      .forEach((s) => s.remove());
 
-    if (existingScript) {
-      // Script was loaded on a previous page — force reload for clean init
-      existingScript.remove();
-      window.location.reload();
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.src = "https://brandedweb.mindbodyonline.com/embed/widget.js";
-    script.async = true;
-    script.onload = () => {
-      setStatus("ready");
-    };
-    script.onerror = () => {
-      setStatus("error");
-    };
-    document.body.appendChild(script);
+    const loadDelay = setTimeout(() => {
+      const script = document.createElement("script");
+      script.src = "https://brandedweb.mindbodyonline.com/embed/widget.js";
+      script.async = true;
+      script.onload = () => setStatus("ready");
+      script.onerror = () => setStatus("error");
+      document.body.appendChild(script);
+    }, 200);
 
     // Fallback timeout
     timeoutId = setTimeout(() => {
@@ -45,6 +38,7 @@ export function MindbodyScheduleWidget() {
     }, 10000);
 
     return () => {
+      clearTimeout(loadDelay);
       clearTimeout(timeoutId);
     };
   }, []);

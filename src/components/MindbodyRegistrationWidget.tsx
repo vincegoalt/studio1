@@ -7,47 +7,32 @@ export function MindbodyRegistrationWidget() {
   const [status, setStatus] = useState<"loading" | "ready" | "error">(
     "loading"
   );
-  const scriptLoaded = useRef(false);
 
   useEffect(() => {
     let timeoutId: ReturnType<typeof setTimeout>;
 
-    // Check if healcode script already exists (means we got here via client-side nav)
-    const existingScript = document.querySelector(
-      'script[src*="healcode"]'
-    );
-
-    if (existingScript) {
-      // Script was loaded on a previous page — it won't re-initialize properly.
-      // Remove it and any globals, then reload the page for a clean state.
-      existingScript.remove();
-      window.location.reload();
-      return;
-    }
-
-    // First visit — load the script normally
-    // Add error suppressor before loading healcode
+    // Suppress healcode.js errors
     const errorHandler = (e: ErrorEvent) => {
       if (e.filename && e.filename.indexOf("healcode") !== -1) {
         e.preventDefault();
-        setStatus("error");
         return true;
       }
     };
     window.addEventListener("error", errorHandler);
 
-    const script = document.createElement("script");
-    script.src =
-      "https://widgets.mindbodyonline.com/javascripts/healcode.js";
-    script.async = true;
-    script.onload = () => {
-      scriptLoaded.current = true;
-      setStatus("ready");
-    };
-    script.onerror = () => {
-      setStatus("error");
-    };
-    document.body.appendChild(script);
+    // Remove any existing healcode scripts so we get a fresh load
+    document.querySelectorAll('script[src*="healcode"]').forEach((s) => s.remove());
+
+    // Small delay to let DOM settle after navigation
+    const loadDelay = setTimeout(() => {
+      const script = document.createElement("script");
+      script.src =
+        "https://widgets.mindbodyonline.com/javascripts/healcode.js";
+      script.async = true;
+      script.onload = () => setStatus("ready");
+      script.onerror = () => setStatus("error");
+      document.body.appendChild(script);
+    }, 200);
 
     // Fallback timeout
     timeoutId = setTimeout(() => {
@@ -56,13 +41,14 @@ export function MindbodyRegistrationWidget() {
           containerRef.current.querySelector("iframe") ||
           containerRef.current.querySelector("form") ||
           containerRef.current.querySelector(".hc-widget");
-        if (!hasContent && !scriptLoaded.current) {
+        if (!hasContent) {
           setStatus("error");
         }
       }
     }, 10000);
 
     return () => {
+      clearTimeout(loadDelay);
       clearTimeout(timeoutId);
       window.removeEventListener("error", errorHandler);
     };
