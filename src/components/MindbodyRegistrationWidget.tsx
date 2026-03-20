@@ -9,22 +9,40 @@ export function MindbodyRegistrationWidget() {
   );
 
   useEffect(() => {
+    if (!containerRef.current) return;
     let timeoutId: ReturnType<typeof setTimeout>;
 
-    // Suppress healcode.js errors
+    // Suppress any healcode errors globally
     const errorHandler = (e: ErrorEvent) => {
-      if (e.filename && e.filename.indexOf("healcode") !== -1) {
+      if (
+        e.filename?.indexOf("healcode") !== -1 ||
+        e.message?.indexOf("healcode") !== -1
+      ) {
         e.preventDefault();
         return true;
       }
     };
     window.addEventListener("error", errorHandler);
 
-    // Remove any existing healcode scripts so we get a fresh load
-    document.querySelectorAll('script[src*="healcode"]').forEach((s) => s.remove());
+    // Remove any leftover healcode scripts & globals from prior navigation
+    document
+      .querySelectorAll('script[src*="healcode"]')
+      .forEach((s) => s.remove());
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const w = window as any;
+    delete w.HealcodeWidget;
+    delete w.healcode;
 
-    // Small delay to let DOM settle after navigation
-    const loadDelay = setTimeout(() => {
+    // Inject the widget element as raw HTML (NOT as a React element)
+    // This prevents React from catching errors thrown by the custom element
+    const widgetHost = containerRef.current.querySelector(".hc-host");
+    if (widgetHost) {
+      widgetHost.innerHTML =
+        '<healcode-widget data-type="registrations" data-widget-partner="object" data-widget-id="6c172080c984" data-widget-version="0"></healcode-widget>';
+    }
+
+    // Load healcode.js after the element is in the DOM
+    const loadTimer = setTimeout(() => {
       const script = document.createElement("script");
       script.src =
         "https://widgets.mindbodyonline.com/javascripts/healcode.js";
@@ -32,7 +50,7 @@ export function MindbodyRegistrationWidget() {
       script.onload = () => setStatus("ready");
       script.onerror = () => setStatus("error");
       document.body.appendChild(script);
-    }, 200);
+    }, 300);
 
     // Fallback timeout
     timeoutId = setTimeout(() => {
@@ -48,7 +66,7 @@ export function MindbodyRegistrationWidget() {
     }, 10000);
 
     return () => {
-      clearTimeout(loadDelay);
+      clearTimeout(loadTimer);
       clearTimeout(timeoutId);
       window.removeEventListener("error", errorHandler);
     };
@@ -77,13 +95,8 @@ export function MindbodyRegistrationWidget() {
           </button>
         </div>
       )}
-      {/* @ts-expect-error - healcode-widget is a custom element from Mindbody */}
-      <healcode-widget
-        data-type="registrations"
-        data-widget-partner="object"
-        data-widget-id="6c172080c984"
-        data-widget-version="0"
-      />
+      {/* Widget gets injected here via innerHTML, outside React's render tree */}
+      <div className="hc-host" />
     </div>
   );
 }
