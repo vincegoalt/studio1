@@ -187,9 +187,15 @@ export function Header() {
                   transition={{ delay: navLinks.length * 0.05 }}
                   className="pt-4 space-y-3"
                 >
-                  <div className="text-center text-sm font-medium text-charcoal">
-                    <MindbodyLoginWidget />
-                  </div>
+                  <Link
+                    href="https://clients.mindbodyonline.com/classic/ws?studioid=5752206"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block text-center text-sm font-medium text-charcoal hover:text-sage transition-colors"
+                  >
+                    Login | Register
+                  </Link>
                   <Link
                     href="/schedule"
                     onClick={() => setIsMobileMenuOpen(false)}
