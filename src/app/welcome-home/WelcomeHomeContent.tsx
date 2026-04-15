@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "Do I need to create a new account?",
     answer:
-      "Yes, Studio 1 uses a new booking system, so you'll need to create a new account. We know it's an extra step, but it helps us start fresh as an independent studio. The good news? Join by April 1 and get reduced rates for your first 3 months!",
+      "Yes, Studio 1 uses a new booking system, so you'll need to create a new account. We know it's an extra step, but it helps us start fresh as an independent studio. Your first class is free — come try us out.",
   },
   {
     question: "What classes will Studio 1 offer?",
@@ -62,7 +62,7 @@ const faqs = [
   {
     question: "Will pricing be the same?",
     answer:
-      "We've worked hard to keep pricing competitive and accessible. Monthly Unlimited is $129/month, Premier Couples Unlimited is $189/month. We also offer 10-class packs for $180, 5-class packs for $100, and $22 drop-ins. Join by April 1 to lock in reduced rates for your first 3 months!",
+      "We've worked hard to keep pricing competitive and accessible. Monthly Unlimited is $129/month, Premier Couples Unlimited is $189/month. We also offer 10-class packs for $180, 5-class packs for $100, and $22 drop-ins. Students get unlimited monthly access for $99/month with a valid student ID.",
   },
 ];
 
@@ -162,34 +162,12 @@ export function WelcomeHomeContent() {
           <FadeIn>
             <div className="max-w-3xl mx-auto text-center text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Welcome Home Offer
+                Welcome Home
               </h2>
-              <p className="text-lg text-white/90 mb-6">
-                Come back to your practice — join by April 1 and lock in reduced
-                rates for your first 3 months.
+              <p className="text-lg text-white/90 mb-8">
+                Come back to your practice. Your first class is free — no
+                commitment, just familiar faces and the community you remember.
               </p>
-              <div className="bg-white/10 rounded-2xl p-8 mb-8">
-                <p className="text-sm uppercase tracking-[0.2em] text-white/80 mb-4">
-                  First 3 Months — Join by April 1
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div>
-                    <p className="text-2xl font-bold">$99<span className="text-base font-normal">/mo</span></p>
-                    <p className="text-white/70 text-sm">Monthly Unlimited</p>
-                    <p className="text-white/50 text-xs mt-1">then $129/mo</p>
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold">$159<span className="text-base font-normal">/mo</span></p>
-                    <p className="text-white/70 text-sm">Couples Unlimited</p>
-                    <p className="text-white/50 text-xs mt-1">then $189/mo</p>
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold">$150</p>
-                    <p className="text-white/70 text-sm">10-Class Pack</p>
-                    <p className="text-white/50 text-xs mt-1">limit 2 per person</p>
-                  </div>
-                </div>
-              </div>
               <Link
                 href="/schedule"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-sage font-medium text-sm uppercase tracking-wider rounded-lg transition-all duration-300 hover:bg-white/90 hover:-translate-y-0.5"

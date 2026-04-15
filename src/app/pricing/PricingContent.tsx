@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Check, ArrowRight, Sparkles, UserPlus } from "lucide-react";
+import { Check, ArrowRight, UserPlus } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn"
 import {
   StaggerContainer,
@@ -24,7 +24,6 @@ const pricingOptions = [
       "Priority booking",
     ],
     cta: "Choose Monthly",
-    promo: "Join by April 1 — $99/mo for 3 months, then $129/mo",
   },
   {
     name: "Premier Couples Unlimited",
@@ -38,7 +37,20 @@ const pricingOptions = [
       "Same household required",
     ],
     cta: "Choose Couples",
-    promo: "Join by April 1 — $159/mo for 3 months, then $189/mo",
+  },
+  {
+    name: "Student Membership",
+    price: "$99",
+    period: "per month",
+    description: "Unlimited monthly access for students with a valid student ID.",
+    features: [
+      "Unlimited classes",
+      "Auto-renews monthly",
+      "All class types included",
+      "Valid student ID required",
+    ],
+    cta: "Choose Student",
+    note: "Create an account with payment info and email hello@studio1tul.com a photo of your Student ID. DO NOT process another membership as refunds will not be available after purchase.",
   },
   {
     name: "10-Class Pack",
@@ -93,52 +105,6 @@ export function PricingContent() {
         </div>
       </section>
 
-      {/* Launch Promo */}
-      <section className="section-padding bg-cream">
-        <div className="container-custom">
-          <FadeIn>
-            <div className="max-w-3xl mx-auto">
-              <div className="bg-sage rounded-3xl p-8 md:p-12 text-white text-center relative overflow-hidden">
-                <div className="absolute top-4 right-4">
-                  <Sparkles className="w-6 h-6 text-white/60" />
-                </div>
-                <p className="text-sm uppercase tracking-[0.2em] text-white/80 mb-4">
-                  Grand Opening Special
-                </p>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Join by April 1
-                </h2>
-                <p className="text-xl text-white/90 mb-6">
-                  Lock in reduced rates for your first 3 months
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 max-w-md mx-auto">
-                  <div>
-                    <p className="text-2xl font-bold">$99<span className="text-base font-normal">/mo</span></p>
-                    <p className="text-white/70 text-sm">Monthly Unlimited</p>
-                    <p className="text-white/50 text-xs mt-1">then $129/mo</p>
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold">$159<span className="text-base font-normal">/mo</span></p>
-                    <p className="text-white/70 text-sm">Couples Unlimited</p>
-                    <p className="text-white/50 text-xs mt-1">then $189/mo</p>
-                  </div>
-                </div>
-                <a
-                  href="/schedule"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-sage font-medium text-sm uppercase tracking-wider rounded-lg transition-all duration-300 hover:bg-white/90 hover:-translate-y-0.5"
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-                <p className="text-white/60 text-sm mt-4">
-                  Promo rates apply to your first 3 months of membership
-                </p>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
       {/* Pricing Grid */}
       <section className="section-padding bg-sand">
         <div className="container-custom">
@@ -164,11 +130,6 @@ export function PricingContent() {
                       <span className="text-stone">{option.period}</span>
                     </div>
                     <p className="text-stone text-sm">{option.description}</p>
-                    {option.promo && (
-                      <p className="text-sage text-sm font-medium mt-2">
-                        {option.promo}
-                      </p>
-                    )}
                   </div>
 
                   <ul className="space-y-3 mb-8 flex-grow">
@@ -182,6 +143,12 @@ export function PricingContent() {
                       </li>
                     ))}
                   </ul>
+
+                  {option.note && (
+                    <p className="text-pebble text-xs leading-relaxed mb-6">
+                      {option.note}
+                    </p>
+                  )}
 
                   <button
                     onClick={() =>

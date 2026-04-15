@@ -7,11 +7,11 @@ export const healthClubSchema = {
   description:
     "Independent boutique fitness studio in Tulsa's Center 1 neighborhood offering Barre, Pilates, and Yoga classes.",
   url: siteUrl,
-  telephone: "+1-918-555-0123",
+  telephone: "+1-918-520-0895",
   email: "hello@studio1tul.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "3509 S Peoria Ave, 2nd Floor",
+    streetAddress: "3509 S Peoria Ave, 3rd Floor",
     addressLocality: "Tulsa",
     addressRegion: "OK",
     postalCode: "74105",
@@ -208,7 +208,7 @@ export const placeSchema = {
     "Independent boutique fitness studio in Tulsa's Center 1 neighborhood.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "3509 S Peoria Ave, 2nd Floor",
+    streetAddress: "3509 S Peoria Ave, 3rd Floor",
     addressLocality: "Tulsa",
     addressRegion: "OK",
     postalCode: "74105",
@@ -255,7 +255,7 @@ export const faqSchema = {
       name: "Do I need to create a new account?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Studio 1 uses a new booking system, so you'll need to create a new account. Join by April 1 to lock in reduced rates for your first 3 months!",
+        text: "Yes, Studio 1 uses a new booking system, so you'll need to create a new account. Your first class is free — no commitment required.",
       },
     },
     {
@@ -271,7 +271,7 @@ export const faqSchema = {
       name: "Will pricing be the same?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We've worked hard to keep pricing competitive and accessible. Monthly Unlimited is $129/month, Couples Unlimited is $189/month, and Student membership is $99/month. We also offer a 10-class pack for $180. Join by April 1 to lock in reduced rates for your first 3 months!",
+        text: "We've worked hard to keep pricing competitive and accessible. Monthly Unlimited is $129/month, Couples Unlimited is $189/month, and Student membership is $99/month. We also offer a 10-class pack for $180, a 5-class pack for $100, and a $22 drop-in rate.",
       },
     },
   ],

@@ -108,7 +108,7 @@ export function LocationContent() {
                     <MapPin className="w-5 h-5 text-white/80 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-medium">
-                        3509 S Peoria Ave, 2nd Floor
+                        3509 S Peoria Ave, 3rd Floor
                       </p>
                       <p className="text-white/80 text-sm">
                         Tulsa, OK 74105

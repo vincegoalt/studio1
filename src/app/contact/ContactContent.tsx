@@ -130,7 +130,7 @@ export function ContactContent() {
                         value={formData.phone}
                         onChange={handleChange}
                         className="mt-2 bg-white border-warm-gray focus:border-sage focus:ring-sage"
-                        placeholder="(918) 555-0123"
+                        placeholder="(918) 520-0895"
                       />
                     </div>
 
@@ -176,7 +176,7 @@ export function ContactContent() {
                       <div>
                         <p className="font-medium text-charcoal">Address</p>
                         <p className="text-stone">
-                          3509 S Peoria Ave, 2nd Floor
+                          3509 S Peoria Ave, 3rd Floor
                           <br />
                           Tulsa, OK 74105
                         </p>
@@ -190,10 +190,10 @@ export function ContactContent() {
                       <div>
                         <p className="font-medium text-charcoal">Phone</p>
                         <a
-                          href="tel:+19185550123"
+                          href="tel:+19185200895"
                           className="text-stone hover:text-sage transition-colors"
                         >
-                          (918) 555-0123
+                          (918) 520-0895
                         </a>
                       </div>
                     </div>
@@ -259,10 +259,10 @@ export function ContactContent() {
               We typically respond within 24 hours. For immediate assistance,
               please call us at{" "}
               <a
-                href="tel:+19185550123"
+                href="tel:+19185200895"
                 className="text-sage font-medium"
               >
-                (918) 555-0123
+                (918) 520-0895
               </a>
               .
             </p>

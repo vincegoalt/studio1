@@ -45,8 +45,8 @@ const testimonials = [
   },
   {
     quote:
-      "All of the instructors at Studio 1 are incredibly experienced and bring so much knowledge to every class. Whether it's barre, Pilates, or Yoga, you're guaranteed an amazing workout every time.",
-    author: "Navid M.",
+      "I just had knee surgery, finished physical therapy and joined Studio 1. It has been a great way to get my strength back. The classes are incredible and I am seeing great results after just a few weeks! Highly recommend!",
+    author: "Deedra Determan",
   },
 ];
 
@@ -306,12 +306,8 @@ export function HomeContent() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Ready to Roll Out Your Mat?
             </h2>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-4">
-              Join by April 1 and lock in{" "}
-              <span className="font-semibold">reduced rates for your first 3 months</span>.
-            </p>
-            <p className="text-white/70 mb-10">
-              Monthly Unlimited starting at $99/mo. No commitment, just movement.
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10">
+              Your first class is free. Come as you are — we&apos;ll meet you on the mat.
             </p>
             <Link
               href="/pricing"
